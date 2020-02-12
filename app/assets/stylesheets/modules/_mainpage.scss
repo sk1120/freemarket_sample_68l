@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.Header {
+  list-style: none;
+  background-color: moccasin;
+  color: black;
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+  .header__upper {
+    list-style: none;
+    background-color: moccasin;
+    color: black;
+    width: 100vw;
+    height: 50px;
+  }
+
+.Main {
+  list-style: none;
+  background-color: palegreen;
+  color: black;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 100px;
+  position: absolute;
+  // margin: 0 auto;
+  
+}
+
+  .introduction {
+    list-style: none;
+    background-color: powderblue;
+    width: 100vw;
+    height: calc(500px + 100px);
+
+
+  }
+
+  .reason {
+    list-style: none;
+    background-color: plum;
+    width: 100vw;
+    height: 500px;
+  }
+
+  .appeal {
+    list-style: none;
+    background-color: palevioletred;
+    width: 100vw;
+    height: 500px;
+  }
+
+  .originality {
+    list-style: none;
+    background-color: pink;
+    width: 100vw;
+    height: 500px;
+  }
+
+  .index {
+    list-style: none;
+    background-color: peachpuff;
+    width: 100vw;
+    height: 500px;
+  }
+
+  .invitation {
+    list-style: none;
+    background-color: papayawhip;
+    width: 100vw;
+    height: 500px;
+  }
+
+  .footer {
+    list-style: none;
+    background-color: paleturquoise;
+    width: 100vw;
+    height: 500px;
+  }
+
+  .SellBtn {
+    position: fixed;
+    background-color: #fff;
+    margin-top: 600px;
+    margin-left: calc(100vw - 150px);
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+  }
