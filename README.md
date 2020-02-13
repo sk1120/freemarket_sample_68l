@@ -139,15 +139,6 @@
 - belongs_to :item
 
 
-## brand_initialsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-
-### Association
-- has_many :brands
-
-
 ## categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -164,11 +155,9 @@
 |Column|Type|Options|
 |------|----|-------|
 |category_id|references|null: false, foreign_key: true|
-|brand_group_id|references|null: false, foreign_key: true|
 |name|string|null: false|
 
 ### Association
 - has_many :item
-- belongs_to :brand_group
 - belongs_to :category
 
