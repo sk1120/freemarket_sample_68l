@@ -1,5 +1,4 @@
 # README
-# README
 
 ## usersテーブル
 
@@ -140,7 +139,7 @@
 - belongs_to :item
 
 
-## brand_groupsテーブル
+## brand_initialsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
