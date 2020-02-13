@@ -1,0 +1,50 @@
+.container{
+  .header {
+    height: 128px;
+    background-color: rgb(238, 124, 124);
+    &__logo {
+      width: 185px;
+      height: 49px;
+      line-height: 49px;
+    }
+  }
+  .contents {
+    width:700px;
+    margin: 0 auto;
+    &__message{
+      padding: 32px;
+      font-size:22px;
+      text-align: center;
+    }
+    &__main{
+      &__btn-space{
+        &__btn{
+          display: block;
+          height: 80px;
+          width :360px;
+          margin:0 auto 50px;
+          border-radius: 4px;
+          font-size:14px;
+          text-decoration: none;
+          text-align: center;
+          line-height: 80px;
+          &--icon{
+            padding-right:20px;
+          }
+          &--mail{
+            background-color: #ea352d;
+            color: #fff;
+          }
+          &--facebook{
+            background-color: #385185;
+            color: #fff;
+          }
+          &--google{
+            color: black;
+            border: solid;
+          }
+        }
+      }
+    }
+  }
+}
