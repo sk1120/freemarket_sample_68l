@@ -45,6 +45,7 @@ th,
 td {
 	margin:0;
 	padding:0;
+	font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
 }
 table {
 	border-collapse:collapse;
@@ -87,6 +88,7 @@ h5,
 h6 {
 	font-size:100%;
 	font-weight:normal;
+	
 }
 q:before,
 q:after {
@@ -116,3 +118,8 @@ select {
 legend {
 	color:#000;
 }
+
+ul{
+	list-style: none;
+}
+
