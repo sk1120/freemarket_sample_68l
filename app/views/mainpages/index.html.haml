@@ -108,12 +108,58 @@
           %h1 ユーザー名
           %p 評価　199　出品数　100
         .contents__content__change_2
-          %ul.contents__content__change_2--select.active
+          .contents__content__change_2--select.active
             %p お知らせ
-            %li 左
-          %ul.contents__content__change_2--select
+            %ul
+              %li
+                .one
+                  =image_tag "material/icon/icon_brand.png"
+                .two
+                  .two--text
+                    %p こんにちは
+                  .two--time
+                    =icon('far','clock fa-pull-left')
+                    %p 6時間前
+                .three
+                  =icon('fas','chevron-right')
+              %li
+                .one
+                  =image_tag "material/icon/icon_brand.png"
+                .two
+                  .two--text
+                    %p ご機嫌よう
+                  .two--time
+                    =icon('far','clock fa-pull-left')
+                    %p 6時間前
+                .three
+                  =icon('fas','chevron-right')
+              
+              
+          .contents__content__change_2--select
             %p　やることリスト
-            %li 右
+            %ul
+              %li
+                .one
+                  =image_tag "material/icon/icon_brand.png"
+                .two
+                  .two--text
+                    %p こんにちは！
+                  .two--time
+                    =icon('far','clock fa-pull-left')
+                    %p 6時間前
+                .three
+                  =icon('fas','chevron-right')
+              %li
+                .one
+                  =image_tag "material/icon/icon_brand.png"
+                .two
+                  .two--text
+                    %p さようなら！さようなら！
+                  .two--time
+                    =icon('far','clock fa-pull-left')
+                    %p 6時間前
+                .three
+                  =icon('fas','chevron-right')
         
         .contents__content__index
         .contents__content__change_2
