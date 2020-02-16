@@ -7,6 +7,7 @@
 .my_page{
   .main{
     width: 100vw;
+    height: 1600px;
     background-color: $thingray;
     padding: 40px 0;
     .contents{
@@ -87,7 +88,7 @@
       width: 50%;
       height: 80px;
       cursor: pointer;
-      background-color: rgb(196, 193, 193);
+      background-color: rgb(243, 243, 243);
       line-height: 80px;
       font-weight: bold;
       font-size: 17px;
@@ -99,7 +100,7 @@
         left: 0px;
         display: none;
         line-height: 0;
-        li{
+        .list_content{
           width: 100%;
           height: 80px;
           padding: 0 30px 0 20px;
@@ -107,21 +108,19 @@
           margin-bottom: 1px;
           display: flex;
           align-items: center;
-          .one{
+          .list_image{
             img{
               width: 50px;
               height: 50px;
             }
           }
-          .two{
+          .list_text{
             width: 100%;
             height: 50px;
-            // background-color: blue;
             padding-left: 20px;
             &--text{
               height: 50%;
               width: 100%;
-              // background-color: purple;
               p{
                 line-height: initial;
                 margin: 0 auto 0 0 ;
@@ -131,7 +130,6 @@
             &--time{
               height: 50%;
               width: 100%;
-              // background-color: yellow;
               position: relative;
               .fa-clock{
                 vertical-align: middle;
@@ -146,7 +144,7 @@
               }
             }
           }
-          .three{
+          .list_icon{
             width: 50px;
             height: 50px;
             margin: 0 0 0 auto;
@@ -157,23 +155,55 @@
               font-size: 30px;
             }
           }
-          // .list_content{
-          //   display: flex;
-          //   img{
-          //     width: 50px;
-          //     height: 50px;
-          //   }
-          //   &__message{
-          //     height: 100%;
-          //     background-color: pink;
-          //   }
-          // }
-          
-          // .fa-chevron-right{
-          //   font-size: 20px;
-          // }
+        }
+        .list_not_exist{
+          width: 100%;
+          height: 280px;
+          background-color: $white;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-evenly;
+          margin-bottom: 5px;
+          img{
+            width: 400px;
+          }
         }
       }
+    }
+  }
+  &__index{
+    width: 100%;
+    height: 100px;
+    background-color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    &--area{
+      width: 100%;
+      height: 100%;
+      background-color: rgb(243, 243, 243);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: initial;
+      text-decoration: none;
+      color: black;
+    }
+  }
+  &__bought_items_title{
+    position: unset;
+    width: 100%;
+    height: 80px;
+    // background-color: rgb(243, 243, 243);
+    background-color: $white;
+    margin-top: 550px;
+    h1{
+      margin-left: 20px;
+      line-height: 80px;
+      font-size: 17px;
+      font-weight: bold;
     }
   }
 }
@@ -198,6 +228,7 @@
     cursor: default;
   }
 }
+
 
 
 

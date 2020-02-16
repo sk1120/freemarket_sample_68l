@@ -101,7 +101,7 @@
             %a{href: "#"}
             %p ログアウト
             =icon('fas','chevron-right')
-
+      
       .contents__content
         .contents__content__user_icon
           %a{href: "#"}
@@ -111,58 +111,121 @@
           .contents__content__change_2--select.active
             %p お知らせ
             %ul
-              %li
-                .one
+              %li.list_content
+                .list_image
                   =image_tag "material/icon/icon_brand.png"
-                .two
-                  .two--text
+                .list_text
+                  .list_text--text
                     %p こんにちは
-                  .two--time
+                  .list_text--time
                     =icon('far','clock fa-pull-left')
                     %p 6時間前
-                .three
+                .list_icon
                   =icon('fas','chevron-right')
-              %li
-                .one
+              %li.list_content
+                .list_image
                   =image_tag "material/icon/icon_brand.png"
-                .two
-                  .two--text
-                    %p ご機嫌よう
-                  .two--time
+                .list_text
+                  .list_text--text
+                    %p こんにちは
+                  .list_text--time
                     =icon('far','clock fa-pull-left')
                     %p 6時間前
-                .three
+                .list_icon
+                  =icon('fas','chevron-right')
+              %li.list_content
+                .list_image
+                  =image_tag "material/icon/icon_brand.png"
+                .list_text
+                  .list_text--text
+                    %p こんにちは
+                  .list_text--time
+                    =icon('far','clock fa-pull-left')
+                    %p 6時間前
+                .list_icon
+                  =icon('fas','chevron-right')
+              %li.list_content
+                .list_image
+                  =image_tag "material/icon/icon_brand.png"
+                .list_text
+                  .list_text--text
+                    %p こんにちは
+                  .list_text--time
+                    =icon('far','clock fa-pull-left')
+                    %p 6時間前
+                .list_icon
+                  =icon('fas','chevron-right')
+              %li.list_content
+                .list_image
+                  =image_tag "material/icon/icon_brand.png"
+                .list_text
+                  .list_text--text
+                    %p こんにちは
+                  .list_text--time
+                    =icon('far','clock fa-pull-left')
+                    %p 6時間前
+                .list_icon
                   =icon('fas','chevron-right')
               
-              
+              %li.contents__content__index
+                %a.contents__content__index--area{href: "#"}
+                  %p 一覧を見る
           .contents__content__change_2--select
             %p　やることリスト
             %ul
-              %li
-                .one
-                  =image_tag "material/icon/icon_brand.png"
-                .two
-                  .two--text
-                    %p こんにちは！
-                  .two--time
-                    =icon('far','clock fa-pull-left')
-                    %p 6時間前
-                .three
-                  =icon('fas','chevron-right')
-              %li
-                .one
-                  =image_tag "material/icon/icon_brand.png"
-                .two
-                  .two--text
-                    %p さようなら！さようなら！
-                  .two--time
-                    =icon('far','clock fa-pull-left')
-                    %p 6時間前
-                .three
-                  =icon('fas','chevron-right')
-        
-        .contents__content__index
+              %li.list_not_exist
+                =image_tag "material/logo/logo.png"
+                %p 現在、やることリストはありません
+        .contents__content__bought_items_title
+          %h1 購入した商品
+
         .contents__content__change_2
+          .contents__content__change_2--select.active
+            %p 購入した商品
+            %ul
+              %li.list_content
+                .list_image
+                  =image_tag "material/icon/icon_brand.png"
+                .list_text
+                  .list_text--text
+                    %p こんにちは
+                  .list_text--time
+                    =icon('far','clock fa-pull-left')
+                    %p 6時間前
+                .list_icon
+                  =icon('fas','chevron-right')
+              %li.list_content
+                .list_image
+                  =image_tag "material/icon/icon_brand.png"
+                .list_text
+                  .list_text--text
+                    %p こんにちは
+                  .list_text--time
+                    =icon('far','clock fa-pull-left')
+                    %p 6時間前
+                .list_icon
+                  =icon('fas','chevron-right')
+              %li.list_content
+                .list_image
+                  =image_tag "material/icon/icon_brand.png"
+                .list_text
+                  .list_text--text
+                    %p こんにちは
+                  .list_text--time
+                    =icon('far','clock fa-pull-left')
+                    %p 6時間前
+                .list_icon
+                  =icon('fas','chevron-right')
+              
+              %li.contents__content__index
+                %a.contents__content__index--area{href: "#"}
+                  %p 一覧を見る
+          .contents__content__change_2--select
+            %p　過去の取引
+            %ul
+              %li.list_not_exist
+                =image_tag "material/logo/logo.png"
+                %p 過去の取引がありません
 
 
 
