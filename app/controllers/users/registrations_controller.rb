@@ -34,6 +34,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       sign_in(:user, @user)
     else 
       render :new_address
+    end
   end
 
   # GET /resource/edit
