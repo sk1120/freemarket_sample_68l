@@ -211,6 +211,29 @@
       font-weight: bold;
     }
   }
+  .new_credit_title{
+    width: 100%;
+    height: 60px;
+    background-color: $white;
+    margin-bottom: 2px;
+    h1{
+      text-align: center;
+      line-height: 60px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+  .new_credit_form_wrapper{
+    width: 100%;
+    height: 500px;
+    background-color: $white;
+    &__contents{
+      width: 80%;
+      height: 100%;
+      margin: 0 auto;
+      background-color: green;
+    }
+  }
 }
 
 .app__footer{

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :mainpages do
     collection do
       get 'logout'
+      get 'new_credit_card'
     end
   end
 end
