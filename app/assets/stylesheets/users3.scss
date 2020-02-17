@@ -1,0 +1,73 @@
+.main{
+  &__contents{
+    width: 350px;
+    margin: 0 auto;
+    &__login-no-acount{
+      text-align: center;
+    }
+    &__form-inner{
+      border-top: 1px solid rgb(212, 212, 212);
+      margin-top: 32px;
+      padding: 24px 0;
+    }
+    &__btn{
+      display: block;
+      height: 60px;
+      margin:0 auto 20px;
+      color:#fff;
+      text-decoration: none;
+      text-align: center;
+      line-height: 60px;
+      margin: 8px 0 0;
+      &--icon{
+        padding-right:20px;
+      }
+      &--no-acount{
+        background-color: #0099e8;
+        text-align: center;
+      }
+      &--facebook{
+        background-color: #385185;
+      }
+      &--google{
+        background-color: #fff;
+        color: black;
+        border: solid;
+        border-width: 1px;
+      }
+    }
+  }
+  .new_user{
+    .field{
+      &__input{
+        height: 30px;
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: $white;
+        line-height: 1.5;
+        font-size: 16px;
+        width: calc(100% - 34px);
+      }
+    }
+  }
+}
+.actions{
+  &__submit-login{
+    background: #ea352d;
+    border: 1px solid #ea352d;
+    color: $white;
+    display: block;
+    width: 100%;
+    line-height: 48px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 40px;
+  }
+}
+.footer{
+  height: 220px;
+  margin: 0 auto;
+  background-color: rgb(240, 238, 238);
+}
