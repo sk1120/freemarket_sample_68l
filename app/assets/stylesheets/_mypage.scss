@@ -190,6 +190,12 @@
       text-decoration: none;
       color: black;
     }
+    .logout{
+      background-color: red;
+      color: $white;
+      width: 52%;
+      height: 81%;
+    }
   }
   &__bought_items_title{
     position: unset;
