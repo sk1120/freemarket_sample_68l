@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  devise_for :users, controllers: {
+    registrations: 'users/registrations',
+  }
+  devise_scope :user do
+    get 'deliver_addresses', to: 'users/registrations#new_address'
+    post 'deliver_addresses', to: 'users/registrations#create_address'
+  end
   root "mainpages#index"
   resources :mainpages do
     collection do

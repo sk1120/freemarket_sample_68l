@@ -55,10 +55,10 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|null: false, foreign_key: true|
-|family_name|string|null: false|
-|first_name|string|null: false|
-|family_name_kana|string|null: false|
-|first_name_kana|string|null: false|
+|family_name2|string|null: false|
+|first_name2|string|null: false|
+|family_name_kana2|string|null: false|
+|first_name_kana2|string|null: false|
 |zip_code|integer|null: false|
 |prefecture|string|null: false|
 |city|string|null: false|

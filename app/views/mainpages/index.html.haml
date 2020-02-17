@@ -1,3 +1,4 @@
+
 .header
 
 .my_page
@@ -131,6 +132,10 @@
                 %p 過去の取引がありません
 
 .app__footer
-
+  - if user_signed_in?
+    = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right--btn"
+  - else
+    = link_to "ログイン", new_user_session_path, class: "header__right--btn"
+    = link_to "新規登録", new_user_registration_path, class: "header__right--btn"
 
 .footer
