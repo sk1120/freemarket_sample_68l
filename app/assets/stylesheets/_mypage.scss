@@ -34,14 +34,22 @@
               left: 0px;
               height:100%;
               width: 100%;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              text-decoration: none;
+              i{
+                font-size: 17px;
+                color: black;
+                margin-right: 25px;
+              }
+              p{
+                font-size: 15px;
+                color: black;
+                margin-left: 20px;
+              }
             }
-            i{
-              font-size: 25px;
-              color: #eee;
-            }
-            p{
-              font-size: 15px;
-            }
+            
           }
         }
         h1{
