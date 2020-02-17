@@ -14,5 +14,5 @@ class User < ApplicationRecord
         validates :first_name_kana, presence: true, format: { with: VALID_family_name_kana_REGEX}
         validates :password,    length: { minimum: 7 }
 
-        has_many :deliver_addresses
+        has_many :deliver_addresses, dependent: :destroy
 end
