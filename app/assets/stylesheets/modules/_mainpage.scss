@@ -3,48 +3,38 @@
 }
 
 .wrapper {
-  display: flex;
+  // display: flex;
   height: 100vh;
   width: 100vw;
 }
 
-.Header {
-  list-style: none;
-  background-color: moccasin;
-  color: black;
-  width: 100vw;
-  height: 100px;
-  display: flex;
-  position: relative;
-  margin: 0 auto;
-  z-index: 1;
-}
 
-  .header__upper {
-    list-style: none;
-    background-color: moccasin;
-    color: black;
-    width: 100vw;
-    height: 50px;
-  }
 
 .Main {
   list-style: none;
   background-color: palegreen;
   color: black;
   width: 100vw;
-  height: 100vh;
-  margin-top: 100px;
-  position: absolute;
-  // margin: 0 auto;
   
 }
 
   .introduction {
     list-style: none;
-    background-color: powderblue;
+    background-image: url('material/pict/bg-mainVisual-pict_pc.jpg');
+    background-size: cover;
     width: 100vw;
-    height: calc(500px + 100px);
+    height: 550px;
+    color: $white;
+    text-shadow: 0 0 5px dimgray;
+    padding-left: 90px;
+
+    &__title {
+      font-size: 50px;
+    }
+
+    &__text {
+      font-size: 18px;
+    }
 
 
   }
@@ -76,27 +66,52 @@
     width: 100vw;
     height: 500px;
   }
+  
 
-  .invitation {
-    list-style: none;
-    background-color: papayawhip;
-    width: 100vw;
-    height: 500px;
-  }
+.SellBtn {
+  // position: fixed;
+  // background-color: mediumturquoise;
+  // color: papayawhip;
+  // z-index: 1;
+  top: calc(100vh - 140px);
+  left: calc(100vw - 180px);
 
-  .footer {
-    list-style: none;
-    background-color: paleturquoise;
-    width: 100vw;
-    height: 500px;
-  }
-
-  .SellBtn {
+  &__text {
     position: fixed;
-    background-color: #fff;
-    margin-top: 600px;
-    margin-left: calc(100vw - 150px);
-    width: 50px;
-    height: 50px;
+    color: $white;
+    top: calc(100vh - 140px);
+    left: calc(100vw - 180px);
+    // right: 70px;
+    width: 110px;
+    height: 20px;
     z-index: 1;
+    text-align: center;
+    padding-top: 10px;
   }
+
+  &__image {
+    position: fixed;
+    background-color: $green;
+    color: papayawhip;
+    top: calc(100vh - 140px);
+    left: calc(100vw - 180px);
+    // top: 600px;
+    // right: 70px;
+    padding-left: 30px;
+    padding-top: 40px;
+    text-decoration: none;
+    width: 110px;
+    height: 110px;
+    // position: relative;
+    // z-index: 1;
+
+    &__icon {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+
+
+

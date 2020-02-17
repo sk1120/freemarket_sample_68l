@@ -1,0 +1,152 @@
+.footer {
+  list-style: none;
+  background-color: $thickgray;
+  color: $white;
+  width: 100vw;
+  height: 400px;
+  margin: 0 auto;
+  // display: flex;
+  justify-content: center;
+  align-items: center;
+  // font-size: 16px;
+  // position: absolute;
+
+  a {
+    text-decoration: none;
+    color: $white;
+    margin: auto;
+    text-align: center;
+    font-size: 12px;
+  }
+}
+
+  .content {
+    list-style: none;
+    background-color: $thickgray;
+    color: $white;
+    width: 100vw;
+    height: 250px;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+
+  }
+
+    .aboutfurima {
+      list-style: none;
+      background-color: $thickgray;
+      color: $white;
+      width: 400px;
+      height: 150px;
+      
+    }
+
+      .abouttitle {
+        list-style: none;
+
+      }
+
+        .overview {
+          color: $white;
+          margin-top: 20px;
+          margin-bottom: 5px;
+        }
+
+        .privacy {
+          margin-bottom: 5px;
+        }
+
+        .terms {
+          margin-bottom: 5px;
+        }
+
+
+    .lookfurima {
+      list-style: none;
+      background-color: $thickgray;
+      width: 400px;
+      height: 150px;
+    }
+
+      .looktitle {
+        list-style: none;
+
+      }
+
+        .categorieslist {
+          margin-top: 20px;
+          margin-bottom: 5px;
+        }
+
+    .help-guide {
+      list-style: none;
+      background-color: $thickgray;
+      width: 400px;
+      height: 150px;
+    }
+
+      .helptitle {
+        list-style: none;
+      }
+
+        .guide {
+          margin-top: 20px;
+          margin-bottom: 5px;
+        }
+
+        .logoguideline {
+          margin-bottom: 5px;
+        }
+
+
+  .logo {
+    list-style: none;
+    background-color: $thickgray;
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    align-items: center;
+    font-size: 16px;
+    // display: flex;
+
+    &__logo {
+      display: block;
+      margin: auto;
+      align-items: center;
+      width: 100%;
+    }
+
+    a {
+      margin: auto;
+      align-items: center;
+    }
+  }
+
+    .footer__logo {
+      width: 200px;
+      height: 50px;
+      margin: 0 auto;
+
+      a {
+        margin: 0 auto;
+        align-items: center;
+      }
+    }
+
+    a {
+      margin: 0 auto;
+      align-items: center;
+    }
+
+    .copyright {
+      width: 100%;
+      text-align: center;
+    }
+
+// a {
+//   margin: 0 auto;
+// }

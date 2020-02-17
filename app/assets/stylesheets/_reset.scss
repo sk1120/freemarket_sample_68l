@@ -1,13 +1,12 @@
-/*!
- * YUI 3.5.0 - reset.css (http://developer.yahoo.com/yui/3/cssreset/)
- * http://cssreset.com
- * Copyright 2012 Yahoo! Inc. All rights reserved.
- * http://yuilibrary.com/license/
- */
 /*
-    TODO will need to remove settings on HTML since we can't namespace it.
-    TODO with the prefix, should I group by selector or property for weight savings?
+  TODO will need to remove settings on HTML since we can't namespace it.
+  TODO with the prefix, should I group by selector or property for weight savings?
 */
+​
+*{
+  box-sizing: border-box;
+}
+​
 html{
   color:#000;
   background:#FFF;
@@ -17,7 +16,7 @@ html{
 */
 /*
   TODO test putting a class on HEAD.
-      - Fails on FF.
+    - Fails on FF.
 */
 body,
 div,
@@ -46,6 +45,7 @@ th,
 td {
   margin:0;
   padding:0;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
 }
 table {
   border-collapse:collapse;
@@ -70,12 +70,12 @@ var {
   font-style:normal;
   font-weight:normal;
 }
-
+​
 ol,
 ul {
   list-style:none;
 }
-
+​
 caption,
 th {
   text-align:left;
@@ -88,6 +88,7 @@ h5,
 h6 {
   font-size:100%;
   font-weight:normal;
+  
 }
 q:before,
 q:after {
@@ -111,16 +112,15 @@ select {
   font-family:inherit;
   font-size:inherit;
   font-weight:inherit;
-}
-/*to enable resizing for IE*/
-input,
-textarea,
-select {
-  *font-size:100%;
+  *font-size:100%; /*to enable resizing for IE*/
 }
 /*because legend doesn't inherit in IE */
 legend {
   color:#000;
 }
-/* YUI CSS Detection Stamp */
-#yui3-css-stamp.cssreset { display: none; }
+​
+ul{
+  list-style: none;
+}
+
+
