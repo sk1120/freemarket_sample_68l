@@ -1,6 +1,141 @@
-%div アイウエオ
-- if user_signed_in?
-  = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right--btn"
-- else
-  = link_to "ログイン", new_user_session_path, class: "header__right--btn"
-  = link_to "新規登録", new_user_registration_path, class: "header__right--btn"
+
+.header
+
+.my_page
+  .main
+    .contents
+      = render "left_menu"
+      
+      .contents__content
+        .contents__content__user_icon
+          %a{href: "#"}
+          %h1 ユーザー名
+          %p 評価　199　出品数　100
+        .contents__content__change_2
+          .contents__content__change_2--select.active
+            %p お知らせ
+            %ul
+              %li.list_content
+                .list_image
+                  =image_tag "material/icon/icon_brand.png"
+                .list_text
+                  .list_text--text
+                    %p こんにちは
+                  .list_text--time
+                    =icon('far','clock fa-pull-left')
+                    %p 6時間前
+                .list_icon
+                  =icon('fas','chevron-right')
+              %li.list_content
+                .list_image
+                  =image_tag "material/icon/icon_brand.png"
+                .list_text
+                  .list_text--text
+                    %p こんにちは
+                  .list_text--time
+                    =icon('far','clock fa-pull-left')
+                    %p 6時間前
+                .list_icon
+                  =icon('fas','chevron-right')
+              %li.list_content
+                .list_image
+                  =image_tag "material/icon/icon_brand.png"
+                .list_text
+                  .list_text--text
+                    %p こんにちは
+                  .list_text--time
+                    =icon('far','clock fa-pull-left')
+                    %p 6時間前
+                .list_icon
+                  =icon('fas','chevron-right')
+              %li.list_content
+                .list_image
+                  =image_tag "material/icon/icon_brand.png"
+                .list_text
+                  .list_text--text
+                    %p こんにちは
+                  .list_text--time
+                    =icon('far','clock fa-pull-left')
+                    %p 6時間前
+                .list_icon
+                  =icon('fas','chevron-right')
+              %li.list_content
+                .list_image
+                  =image_tag "material/icon/icon_brand.png"
+                .list_text
+                  .list_text--text
+                    %p こんにちは
+                  .list_text--time
+                    =icon('far','clock fa-pull-left')
+                    %p 6時間前
+                .list_icon
+                  =icon('fas','chevron-right')
+              
+              %li.contents__content__index
+                %a.contents__content__index--area{href: "#"}
+                  %p 一覧を見る
+          .contents__content__change_2--select
+            %p　やることリスト
+            %ul
+              %li.list_not_exist
+                =image_tag "material/logo/logo.png"
+                %p 現在、やることリストはありません
+        .contents__content__bought_items_title
+          %h1 購入した商品
+
+        .contents__content__change_2
+          .contents__content__change_2--select.active
+            %p 購入した商品
+            %ul
+              %li.list_content
+                .list_image
+                  =image_tag "material/icon/icon_brand.png"
+                .list_text
+                  .list_text--text
+                    %p こんにちは
+                  .list_text--time
+                    =icon('far','clock fa-pull-left')
+                    %p 6時間前
+                .list_icon
+                  =icon('fas','chevron-right')
+              %li.list_content
+                .list_image
+                  =image_tag "material/icon/icon_brand.png"
+                .list_text
+                  .list_text--text
+                    %p こんにちは
+                  .list_text--time
+                    =icon('far','clock fa-pull-left')
+                    %p 6時間前
+                .list_icon
+                  =icon('fas','chevron-right')
+              %li.list_content
+                .list_image
+                  =image_tag "material/icon/icon_brand.png"
+                .list_text
+                  .list_text--text
+                    %p こんにちは
+                  .list_text--time
+                    =icon('far','clock fa-pull-left')
+                    %p 6時間前
+                .list_icon
+                  =icon('fas','chevron-right')
+              
+              %li.contents__content__index
+                %a.contents__content__index--area{href: "#"}
+                  %p 一覧を見る
+          .contents__content__change_2--select
+            %p　過去の取引
+            %ul
+              %li.list_not_exist
+                =image_tag "material/logo/logo.png"
+                %p 過去の取引がありません
+
+.app__footer
+  - if user_signed_in?
+    = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right--btn"
+  - else
+    = link_to "ログイン", new_user_session_path, class: "header__right--btn"
+    = link_to "新規登録", new_user_registration_path, class: "header__right--btn"
+
+.footer

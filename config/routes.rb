@@ -7,4 +7,10 @@ Rails.application.routes.draw do
     post 'deliver_addresses', to: 'users/registrations#create_address'
   end
   root "mainpages#index"
+  resources :mainpages do
+    collection do
+      get 'logout'
+      get 'new_credit_card'
+    end
+  end
 end
