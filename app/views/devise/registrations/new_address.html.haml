@@ -1,30 +1,48 @@
-%h2 住所情報登録
-= form_for @address do |f|
-  = render "devise/shared/error_messages", resource: @address
-  .field
-    = f.label :zip_code
-    %br/
-    = f.text_field :zip_code
-  .field
-    = f.label :prefecture
-    %br/
-    = f.text_field :prefecture
-  .field
-    = f.label :city
-    %br/
-    = f.text_field :city
-  .field
-    = f.label :address1
-    %br/
-    = f.text_field :address1
-  .field
-    = f.label :address2
-    %br/
-    = f.text_field :address2
-  .field
-    = f.label :telephone
-    %br/
-    = f.text_field :telephone
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+.contents
+  .contents__message
+    住所情報登録
+  = form_for @address do |f|
+    = render "devise/shared/error_messages", resource: @address
+    .field
+      = f.label :商品送付先氏名（全角）
+      %span.field__required 必須
+      .field__name
+        = f.text_field :family_name, autofocus: true, placeholder: '例）山田', class: "field__name__half"
+        = f.text_field :first_name, autofocus: true, placeholder: '例）太郎', class: "field__name__half"
+    .field
+      = f.label :商品送付先氏名かな（全角）
+      %span.field__required 必須
+      .field__name
+        = f.text_field :family_name_kana, autofocus: true, placeholder: '例）ヤマダ', class: "field__name__half"
+        = f.text_field :first_name_kana, autofocus: true, placeholder: '例）タロウ', class: "field__name__half"
+    .field
+      = f.label :郵便番号
+      %span.field__required 必須
+      %br/
+      = f.text_field :zip_code, class: "field__input", placeholder: '例）0000000'
+    .field
+      = f.label :都道府県
+      %span.field__required 必須
+      %br/
+      = f.text_field :prefecture, class: "field__input", placeholder: '例）東京都'
+    .field
+      = f.label :市区町村
+      %span.field__required 必須
+      %br/
+      = f.text_field :city, class: "field__input", placeholder: '例）渋谷区'
+    .field
+      = f.label :番地
+      %span.field__required 必須
+      %br/
+      = f.text_field :address1, class: "field__input", placeholder: '例）1-1-1'
+    .field
+      = f.label :マンション名やビル名、部屋番号（任意）
+      %br/
+      = f.text_field :address2, class: "field__input", placeholder: '例）XXビル 000号室'
+    .field
+      = f.label :お届け先の電話番号（任意）
+      %br/
+      = f.text_field :telephone, class: "field__input", placeholder: '例）00000000000'
+    .actions
+      = f.submit "Sign up", class: "actions__submit"
+  = render "devise/shared/links"
