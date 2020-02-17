@@ -7,7 +7,7 @@
       
       .contents__content
         %li.contents__content__index
-          %a.contents__content__index--area.logout{href: destroy_user_session_path}
+          %a.contents__content__index--area.logout{href: destroy_user_session_path,"data-method": :delete}
             %p ログアウト
 
 .app__footer
