@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root "items#new"
   devise_for :users, controllers: {
     registrations: 'users/registrations',
   }
@@ -6,5 +7,5 @@ Rails.application.routes.draw do
     get 'deliver_addresses', to: 'users/registrations#new_address'
     post 'deliver_addresses', to: 'users/registrations#create_address'
   end
-  root "mainpages#index"
+  
 end

@@ -14,5 +14,8 @@ class User < ApplicationRecord
         validates :first_name_kana, presence: true, format: { with: VALID_family_name_kana_REGEX}
         validates :password,    length: { minimum: 7 }
 
-        has_many :deliver_addresses, dependent: :destroy
+        has_many :buyed_items, foreign_key: "buyer_id", class_name: "Item"
+        has_many :saling_items, -> { where("buyer_id is NULL") }, foreign_key: "saler_id", class_name: "Item"
+        has_many :sold_items, -> { where("buyer_id is not NULL") }, foreign_key: "saler_id", class_name: "Item"
+        has_many :item
 end
