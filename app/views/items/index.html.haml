@@ -1,0 +1,67 @@
+.header
+
+.show_item
+  .item_wrapper
+    %h1.item_title Ruby on Rails
+    .image_top_wrapper
+      =image_tag  "https://cdn.pixabay.com/photo/2020/02/11/21/09/bio-4840960_1280.jpg",{class: "image_top"}
+      %ul.bxslider
+        %li.image_child_wrapper
+          =image_tag "https://cdn.pixabay.com/photo/2020/01/26/22/55/road-4796107_1280.jpg",{class: "image_child"}
+        %li.image_child_wrapper
+          =image_tag "https://cdn.pixabay.com/photo/2017/08/28/17/39/poster-2690541_1280.png",{class: "image_child"}
+
+
+
+
+  .item_comment_wrapper
+    .text_form_area
+      .comment_wrapper__opponent
+        .opponent_name 
+          %p 購入者
+        .comment_wrapper__opponent--text_area_opponent
+          %p.text こんにちは
+          %i.far.fa-clock 52分前
+
+      .comment_wrapper__owner
+        .owner_name 
+          %p 出品者
+          %p.owner 出品者
+        .comment_wrapper__owner--text_area_owner
+          %p.text こんにちは
+          %i.far.fa-clock 52分前
+
+      .comment_wrapper__self
+        .self_name 
+          %p 自分
+        .comment_wrapper__self--text_area_self
+          %p.text こんにちは
+          %i.far.fa-clock 52分前
+      
+      %textarea.text_form_area--form{type: "textarea",rows: "5"}
+      .caution_area
+        %p 
+          相手のことを考え丁寧なコメントを心がけましょう。
+          %br
+          不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      =button_tag type: "submit", class: "text_form_area--submit" do
+        %i.fa.fa-comment コメントする
+
+  .move_items
+    =link_to "#" do
+      =icon('fas','chevron-left')
+      %p 前の商品
+    =link_to "#" do
+      %p 次の商品
+      =icon('fas','chevron-right')
+
+  =link_to "レディースをもっと見る","#",class: "see_category"
+
+.app__footer
+  - if user_signed_in?
+    = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right--btn"
+  - else
+    = link_to "ログイン", new_user_session_path, class: "header__right--btn"
+    = link_to "新規登録", new_user_registration_path, class: "header__right--btn"
+
+.footer
