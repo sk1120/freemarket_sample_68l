@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root "salepages#index"
-  resources :item_images, only: [:index, :create]
+  resources :item_images, only: [:index, :create, :destroy]
   devise_for :users, controllers: {
     registrations: 'users/registrations',
   }
