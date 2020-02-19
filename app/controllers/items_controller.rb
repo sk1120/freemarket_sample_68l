@@ -1,24 +1,33 @@
 class ItemsController < ApplicationController
   def index
-    @items = Item.new
+    @items = Item.includes(:images).order('created_at DESC')
   end
 
   def new
-    @parents = Category.all.order("id ASC").limit(13)
     @item = Item.new
+    @item.item_images.new
   end
 
   def create
-
+    @item = Item.new(item_params)
+  if @item.save
+    redirect_to root_path
+  else
+    render :new
+  end
   end
 
-  def search
-    respond_to do |format|
-      format.html
-      format.json do
-       @children = Category.find(params[:parent_id]).children
-       #親ボックスのidから子ボックスのidの配列を作成してインスタンス変数で定義
-      end
-    end
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
+  end
+
+  private
+  def item_params
+    params.require(:item).permit(:name, :price, images_attributes: [:src])
   end
 end
