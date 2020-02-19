@@ -33,6 +33,15 @@ class ImageUploader < CarrierWave::Uploader::Base
     process resize_to_fit: [800, 800]
   # end
 
+  if Rails.env.development?
+    storage :file
+  elsif Rails.env.test?
+    storage :file
+  else
+    storage :fog
+  end
+
+
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   # def extension_whitelist
