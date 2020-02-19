@@ -40,7 +40,6 @@ lady_19 = lady.children.create(name: "その他")
 lady_19.children.create([{name: "コスプレ"},{name: "下着"},{name: "その他"}])
 
 # メンズ
-men = Category.create(name: "メンズ")
 men_1 = men.children.create(name: "トップス")
 men_1.children.create([{name: "Tシャツ/カットソー(半袖/袖なし)"},{name: "Tシャツ/カットソー(七分/長袖)"},{name: "シャツ"},{name: "ポロシャツ"},{name: "タンクトップ"},{name: "ニット/セーター"},{name: "パーカー"},{name: "カーディガン"},{name: "スウェット"},{name: "ジャージ"},{name: "ベスト"},{name: "その他"}])
 men_2 = men.children.create(name: "ジャケット/アウター")
