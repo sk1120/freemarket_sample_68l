@@ -3,7 +3,8 @@
     .introduction__title
       人生を変えるフリマアプリ
     .introduction__text
-      FURIMAはだれでもかんたんに出品・購入できるフリマアプリです
+      %p FURIMAはだれでもかんたんに出品・購入できる
+      %p フリマアプリです
     .introduction__link
       = link_to "#", class: "banner__link__a-btn" do
         = image_tag 'material/logo/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg', class: "banner__link__a-btn__image"
@@ -11,10 +12,126 @@
         = image_tag 'material/logo/google-play-badge.png', class: "banner__link__g-btn__image"
 
   .reason
+    .reason__title
+      FURIMAが選ばれる3つの理由
+
+    .reason__underline
+
+    %ul.reason__list
+      %li.reason__list__first
+        .reason__list__first__image
+          = image_tag 'material/pict/pict-reason-01.jpg',class: "reason__list__first__image__img"
+          .reason__list__first__image__number
+            1
+        .reason__list__first__title
+          %span
+            3分
+          ですぐに出品
+        .reason__list__first__text
+          スマホで入力するだけで簡単に出品できる！
+
+      %li.reason__list__second
+        .reason__list__second__image
+          = image_tag 'material/pict/pict-reason-02.jpg',class: "reason__list__second__image__img"
+          .reason__list__second__image__number
+            2
+        .reason__list__second__title
+          %span
+            シンプル
+          で使いやすい
+        .reason__list__second__text
+          めんどくさい入力は必要なく、検索も購入もスムーズ！
+
+      %li.reason__list__third
+        .reason__list__third__image
+          = image_tag 'material/pict/pict-reason-03.jpg',class: "reason__list__third__image__img"
+          .reason__list__third__image__number
+            3
+        .reason__list__third__title
+          手数料
+          %span
+            業界最安
+        .reason__list__third__text
+          最大3%でお得に出品&購入！
 
   .appeal
 
+
   .originality
 
+
   .index
+    .pickupcategory
+      .pickupcategory__title
+        ピックアップカテゴリー
+
+      .pickupcategory__new
+        = link_to "#" do
+          新規投稿商品
+
+      .pickupcategory__items
+        %ul.pickupcategory__top
+          %li.pickupcategory__top__first
+            = link_to "#" do
+              = image_tag 'material/pict/omake_zasshi_otona.png', class: "pickupcategory__top__first__img"
+              .pickupcategory__top__first__data
+                .pickupcategory__top__first__data__name
+                  付録つきファッション誌
+                %ul.pickupcategory__top__first__data__details
+                  %li.pickupcategory__top__first__data__details__price
+                    ¥3000
+                  %li.pickupcategory__top__first__data__details__likes
+                    ★4
+                %p (税込)
+
+          %li.pickupcategory__top__second
+            = link_to "#" do
+              = image_tag 'material/pict/hair_barretta.png', class: "pickupcategory__top__second__img"
+              .pickupcategory__top__second__data
+                .pickupcategory__top__second__data__name
+                  ヘアアクセサリー
+                %ul.pickupcategory__top__second__data__details
+                  %li.pickupcategory__top__second__data__details__price
+                    ¥2000
+                  %li.pickupcategory__top__second__data__details__likes
+                    ★4.5
+                %p (税込)
+
+          %li.pickupcategory__top__third
+            = link_to "#" do
+              = image_tag 'material/pict/fashion_shiborizome.png', class: "pickupcategory__top__third__img"
+              .pickupcategory__top__third__data
+                .pickupcategory__top__third__data__name
+                  Tシャツ
+                %ul.pickupcategory__top__third__data__details
+                  %li.pickupcategory__top__third__data__details__price
+                    ¥1000
+                  %li.pickupcategory__top__third__data__details__likes
+                    ★3
+                %p (税込)
+
+    .pickupbrand
+      .pickupbrand__title
+        ピックアップブランド
+
+      .pickupbrand__new
+        = link_to "#" do
+          アーカイバ
+
+      .pickupbrand__items
+        %ul.pickupbrand__top
+          %li.pickupbrand__top__first
+            = link_to "#" do
+              = image_tag 'material/pict/omake_zasshi_otona.png', class: "pickupbrand__top__first__img"
+              .pickupbrand__top__first__data
+                .pickupbrand__top__first__data__name
+                  付録つきファッション誌
+                %ul.pickupbrand__top__first__data__details
+                  %li.pickupbrand__top__first__data__details__price
+                    ¥3000
+                  %li.pickupbrand__top__first__data__details__likes
+                    ★4
+                %p (税込)
+          %li.pickupbrand__top__second
+          %li.pickupbrand__top__third
 

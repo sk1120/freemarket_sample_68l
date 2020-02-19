@@ -27,13 +27,16 @@
     color: $white;
     text-shadow: 0 0 5px dimgray;
     padding-left: 90px;
+    padding-top: 20%;
 
     &__title {
-      font-size: 50px;
+      font-size: 60px;
+      margin-bottom: 10px;
     }
 
     &__text {
       font-size: 18px;
+      margin-bottom: 30px;
     }
 
 
@@ -41,9 +44,178 @@
 
   .reason {
     list-style: none;
-    background-color: plum;
+    background-color: $white;
     width: 100vw;
-    height: 500px;
+    // height: 700px;
+
+    &__title {
+      height: 100px;
+      font-size: 25px;
+      font-weight: bold;
+      color: $thickgray;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    &__underline {
+      background-color: $green;
+      width: 80px;
+      height: 5px;
+      margin: auto;
+      margin-bottom: 25px;
+    }
+
+    &__list {
+      // height: 500px;
+      width: 100%;
+      // padding-left: 10px;
+      // padding-right: 10px;
+      display: flex;
+      justify-content: space-evenly;
+      padding-bottom: 50px;
+
+      &__first {
+        height: 100%;
+        width: 25%;
+
+        &__image {
+          // height: 100%;
+          width: 100%;
+          position: relative;
+
+          &__img {
+            // height: 100%;
+            width: 100%;
+          }
+
+          &__number {
+            background-color: $green;
+            color: $white;
+            height: 55px;
+            width: 55px;
+            position: absolute;
+            top: 0px;
+            text-align: center;
+            padding-top: 10px;
+            font-size: 30px;
+          }
+        }
+
+        &__title {
+          // height: 60px;
+          width: 100%;
+          margin-bottom: 30px;
+          font-size: 24px;
+          font-weight: bold;
+          text-align: center;
+          padding-top: 20px;
+
+          span {
+            color: $green;
+          }
+
+        }
+
+        &__text {
+          font-size: 18px;
+        }
+
+      }
+
+      &__second {
+        height: 100%;
+        width: 25%;
+
+        &__image {
+          // height: 100%;
+          width: 100%;
+          position: relative;
+
+          &__img {
+            // height: 100%;
+            width: 100%;
+          }
+
+          &__number {
+            background-color: $green;
+            color: $white;
+            height: 55px;
+            width: 55px;
+            position: absolute;
+            top: 0px;
+            text-align: center;
+            padding-top: 10px;
+            font-size: 30px;
+          }
+        }
+
+        &__title {
+          // height: 60px;
+          width: 100%;
+          margin-bottom: 30px;
+          font-size: 24px;
+          font-weight: bold;
+          text-align: center;
+          padding-top: 20px;
+
+          span {
+            color: $green;
+          }
+        }
+
+        &__text {
+          font-size: 18px;
+        }
+      }
+
+      &__third {
+        height: 100%;
+        width: 25%;
+
+        &__image {
+          // height: 100%;
+          width: 100%;
+          position: relative;
+
+          &__img {
+            // height: 100%;
+            width: 100%;
+          }
+
+          &__number {
+            background-color: $green;
+            color: $white;
+            height: 55px;
+            width: 55px;
+            position: absolute;
+            top: 0px;
+            text-align: center;
+            padding-top: 10px;
+            font-size: 30px;
+          }
+        }
+
+        &__title {
+          // height: 60px;
+          width: 100%;
+          margin-bottom: 30px;
+          font-size: 24px;
+          font-weight: bold;
+          text-align: center;
+          padding-top: 20px;
+
+          span {
+            color: $green;
+          }
+        }
+
+        &__text {
+          font-size: 18px;
+        }
+      }
+    }
+      
+
   }
 
   .appeal {
@@ -60,12 +232,356 @@
     height: 500px;
   }
 
+
   .index {
     list-style: none;
     background-color: peachpuff;
     width: 100vw;
-    height: 500px;
+    // height: 1000px;
+    
+    // padding-left: 50px;
+    // padding-right: 50px;
+    // margin-top: 50px;
   }
+
+    .pickupcategory {
+      background-color: royalblue;
+      width: 100%;
+      // height: 50%;
+      height: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 50px;
+
+      &__title {
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+      }
+    
+      &__new {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 10px;
+        text-align: center;
+
+        a{
+          font-size: 24px;
+          color: $green;
+          font-weight: bold;
+        }
+      }
+
+      &__items {
+        width: 100%;
+        // height: 350px;
+      }
+
+        &__top {
+          background-color: mediumpurple;
+          width: 100%;
+          // width: 900px;
+          // height: 100%;
+          // height: calc(100% - 50px - 30px);
+          // margin-left: 20px;
+          // margin-right: 20px;
+          padding-left: 80px;
+          padding-right: 80px;
+          display: flex;
+          justify-content: space-evenly;
+          // float: left;
+
+        // #grid {
+        //   width: 900px;
+        // }
+
+          &__first {
+            background-color: powderblue;
+            width: 25%;
+            // height: 100%;
+            margin: 5px;
+            position: relative;
+
+            a {
+              color: $thickgray;
+            }
+
+              &__img {
+                // width: 200px;
+                // height: 100%;
+                display: block;
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 10%;
+                
+              }
+
+              &__data {
+                background-color: oldlace;
+                width: 100%;
+                top: 100%;
+                padding-left: 20px;
+                padding-right: 20px;
+                position: absolute;
+                // display: flex;
+
+                &__name {
+                  padding-top: 10px;
+                  margin-bottom: 10px;
+                  font-size: 16px;
+                }
+
+                &__details {
+                  width: 100%;
+                  display: flex;
+                  justify-content: space-between;
+
+                  &__price {
+                    font-size: 16px;
+                    // padding-left: 20px;
+                  }
+
+                  &__likes {
+                    font-size: 14px;
+                    // padding-right: 20px;
+                  }
+                }
+
+                p {
+                  font-size: 10px;
+                }
+              }
+          }
+
+          &__second {
+            background-color: lavender;
+            width: 25%;
+            // height: 100%;
+            margin: 5px;
+            position: relative;
+
+            a {
+              color: $thickgray;
+            }
+
+              &__img {
+                // width: 200px;
+                // height: 100%;
+                display: block;
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 10%;
+              }
+
+              &__data {
+                background-color: oldlace;
+                width: 100%;
+                top: 100%;
+                padding-left: 20px;
+                padding-right: 20px;
+                position: absolute;
+                // display: flex;
+
+                &__name {
+                  padding-top: 10px;
+                  margin-bottom: 10px;
+                  font-size: 16px;
+                }
+
+                &__details {
+                  width: 100%;
+                  display: flex;
+                  justify-content: space-between;
+
+                  &__price {
+                    font-size: 16px;
+                    // padding-left: 20px;
+                  }
+
+                  &__likes {
+                    font-size: 14px;
+                    // padding-right: 20px;
+                  }
+
+                }
+
+                p {
+                  font-size: 10px;
+                }
+
+              }
+          
+          }
+
+          &__third {
+            background-color: lightskyblue;
+            width: 25%;
+            margin: 5px;
+            position: relative;
+
+            a {
+              color: $thickgray;
+            }
+
+              &__img {
+                display: block;
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 10%;
+                
+              }
+
+              &__data {
+                background-color: oldlace;
+                width: 100%;
+                top: 100%;
+                padding-left: 20px;
+                padding-right: 20px;
+                position: absolute;
+
+                &__name {
+                  padding-top: 10px;
+                  margin-bottom: 10px;
+                  font-size: 16px;
+                }
+
+                &__details {
+                  width: 100%;
+                  display: flex;
+                  justify-content: space-between;
+
+                  &__price {
+                    font-size: 16px;
+                  }
+
+                  &__likes {
+                    font-size: 14px;
+                  }
+                }
+
+                p {
+                  font-size: 10px;
+                }
+              }
+          }
+        }
+    }
+
+    .pickupbrand {
+      background-color: mistyrose;
+      width: 100%;
+      height: 600px;
+      // height: 500px;
+      // height: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 50px;
+
+      &__title {
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      &__new {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 10px;
+        text-align: center;
+
+        a {
+          font-size: 24px;
+          color: $green;
+          font-weight: bold;
+        }
+      }
+
+      &__items {
+        width: 100%;
+      }
+
+
+        &__top {
+          background-color: paleturquoise;
+          width: 100%;
+          // height: 100%;
+          padding-left: 80px;
+          padding-right: 80px;
+          display: flex;
+          justify-content: space-evenly;
+
+          &__first {
+            background-color: lightskyblue;
+            width: 25%;
+            margin: 5px;
+            position: relative;
+
+            a {
+              color: $thickgray;
+            }
+
+              &__img {
+                display: block;
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 10%;
+                
+              }
+
+              &__data {
+                background-color: oldlace;
+                width: 100%;
+                top: 100%;
+                padding-left: 20px;
+                padding-right: 20px;
+                position: absolute;
+
+                &__name {
+                  padding-top: 10px;
+                  margin-bottom: 10px;
+                  font-size: 16px;
+                }
+
+                &__details {
+                  width: 100%;
+                  display: flex;
+                  justify-content: space-between;
+
+                  &__price {
+                    font-size: 16px;
+                  }
+
+                  &__likes {
+                    font-size: 14px;
+                  }
+                }
+
+                p {
+                  font-size: 10px;
+                }
+              }
+
+          }
+
+          &__second {
+            width: 25%;
+            height: 100%;
+          }
+
+          &__third {
+            width: 25%;
+            height: 100%;
+          }
+        }
+    }
   
 
 .SellBtn {

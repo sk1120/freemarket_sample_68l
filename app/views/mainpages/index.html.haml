@@ -4,3 +4,11 @@
 - else
   = link_to "ログイン", new_user_session_path, class: "header__right--btn"
   = link_to "新規登録", new_user_registration_path, class: "header__right--btn"
+
+.wrapper
+  = render "shared/header"
+  = render "shared/main_top"
+  = render "shared/banner"
+  = render "shared/footer"
+  = render "shared/SellBtn"
+
