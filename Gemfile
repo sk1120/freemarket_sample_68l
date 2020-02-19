@@ -80,3 +80,4 @@ gem 'mini_magick'
 gem 'haml-rails'
 gem 'ancestry'
 gem 'active_hash'
+gem "dropzonejs-rails"
