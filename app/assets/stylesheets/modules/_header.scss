@@ -47,12 +47,8 @@
 
     .submit {
       list-style: none;
-      // display: none;
       width: 50px;
       height: 100%;
-
-      &__image {
-      }
     }
 
     .submitbtn {
@@ -77,7 +73,7 @@
 
 a {
   text-decoration: none;
-  color: black;
+  color: $thickgray;
   font-size: 14px;
 }
     
@@ -85,7 +81,6 @@ a {
   .header__lower {
     list-style: none;
     background-color: $white;
-    color: black;
     width: 100%;
     height: 50px;
     line-height: 50px;
@@ -113,35 +108,44 @@ a {
         height: 50px;
       }
 
-    .userlogin {
+    .userpage {
       list-style: none;
-      background-color: $white;
       display: flex;
-      width: 200px;
-      height: 50px;
-      text-decoration: none;
-      color: black;
+
+      &__info {
+        padding-right: 30px;
+      }
+
+      &__todo {
+        padding-right: 30px;
+      }
     }
 
-      .login {
-        background-color: $white;
-        width: 100px;
-        height: 50px;
-        color: black;
-      }
 
-      .registration {
-        background-color: $white;
-        width: 100px;
-        height: 50px;
-      }
+  // 未ログインの時の表記について
+    // .userlogin {
+    //   list-style: none;
+    //   background-color: $white;
+    //   display: flex;
+    //   width: 200px;
+    //   height: 50px;
+    //   text-decoration: none;
+    // }
 
-      a {
-        text-decoration: none;
-        color: black;
-      }
+    //   .login {
+    //     background-color: $white;
+    //     width: 100px;
+    //     height: 50px;
+    //   }
 
-// a {
-//   text-decoration: none;
-//   color: black;
-// }
+    //   .registration {
+    //     background-color: $white;
+    //     width: 100px;
+    //     height: 50px;
+    //   }
+
+    //   a {
+    //     text-decoration: none;
+    //     color: black;
+    //   }
+
