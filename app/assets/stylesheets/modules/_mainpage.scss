@@ -74,101 +74,7 @@
       justify-content: space-evenly;
       padding-bottom: 50px;
 
-      &__first {
-        height: 100%;
-        width: 25%;
-
-        &__image {
-          // height: 100%;
-          width: 100%;
-          position: relative;
-
-          &__img {
-            // height: 100%;
-            width: 100%;
-          }
-
-          &__number {
-            background-color: $green;
-            color: $white;
-            height: 55px;
-            width: 55px;
-            position: absolute;
-            top: 0px;
-            text-align: center;
-            padding-top: 10px;
-            font-size: 30px;
-          }
-        }
-
-        &__title {
-          // height: 60px;
-          width: 100%;
-          margin-bottom: 30px;
-          font-size: 24px;
-          font-weight: bold;
-          text-align: center;
-          padding-top: 20px;
-
-          span {
-            color: $green;
-          }
-
-        }
-
-        &__text {
-          font-size: 18px;
-        }
-
-      }
-
-      &__second {
-        height: 100%;
-        width: 25%;
-
-        &__image {
-          // height: 100%;
-          width: 100%;
-          position: relative;
-
-          &__img {
-            // height: 100%;
-            width: 100%;
-          }
-
-          &__number {
-            background-color: $green;
-            color: $white;
-            height: 55px;
-            width: 55px;
-            position: absolute;
-            top: 0px;
-            text-align: center;
-            padding-top: 10px;
-            font-size: 30px;
-          }
-        }
-
-        &__title {
-          // height: 60px;
-          width: 100%;
-          margin-bottom: 30px;
-          font-size: 24px;
-          font-weight: bold;
-          text-align: center;
-          padding-top: 20px;
-
-          span {
-            color: $green;
-          }
-        }
-
-        &__text {
-          font-size: 18px;
-        }
-      }
-
-      &__third {
+      &__content {
         height: 100%;
         width: 25%;
 
@@ -214,8 +120,6 @@
         }
       }
     }
-      
-
   }
 
   .appeal {
@@ -227,16 +131,75 @@
 
   .originality {
     list-style: none;
-    background-color: pink;
+    background-color: $white;
     width: 100vw;
-    height: 500px;
+    // height: 700px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+
+    &__title {
+      height: 100px;
+      font-size: 25px;
+      font-weight: bold;
+      color: $thickgray;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    &__underline {
+      background-color: $green;
+      width: 80px;
+      height: 5px;
+      margin: auto;
+      margin-bottom: 25px;
+    }
+
+    &__list {
+      background-color: $white;
+      color: $thickgray;
+      height: 80%;
+      display: flex;
+      justify-content: space-evenly;
+
+      &__content {
+        background-color: $white;
+        color: $thickgray;
+        width: 25%;
+        height: 100%;
+
+        &__image {
+
+          &__img {
+            display: block;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+          }
+        }
+
+        &__title {
+          margin-bottom: 10px;
+          font-size: 18px;
+          font-weight: bold;
+          text-align: center;
+          padding-top: 20px;
+        }
+
+        &__text {
+          padding-bottom: 20px;
+        }
+      }
+    }
   }
 
 
   .index {
     list-style: none;
-    background-color: peachpuff;
+    background-color: $thingray;
     width: 100vw;
+    padding-bottom: 5%;
     // height: 1000px;
     // padding-left: 50px;
     // padding-right: 50px;
@@ -244,14 +207,14 @@
   }
 
     .pickupcategory {
-      background-color: royalblue;
+      background-color: $thingray;
       width: 100%;
       // height: 100%;
       height: 600px;
 
       margin-left: auto;
       margin-right: auto;
-      padding-top: 50px;
+      padding-top: 5%;
 
       &__title {
         width: 100%;
@@ -281,7 +244,7 @@
       }
 
         &__top {
-          background-color: mediumpurple;
+          background-color: $thingray;
           width: 100%;
           // width: 900px;
           height: 100%;
@@ -299,7 +262,7 @@
         // }
 
           &__list {
-            background-color: powderblue;
+            background-color: $white;
             width: 25%;
             margin: 5px;
             position: relative;
@@ -320,7 +283,7 @@
               }
 
               &__data {
-                background-color: oldlace;
+                background-color: $white;
                 width: 100%;
                 top: 100%;
                 padding-left: 20px;
@@ -360,14 +323,14 @@
     }
 
     .pickupbrand {
-      background-color: mistyrose;
+      background-color: $thingray;
       width: 100%;
       height: 600px;
       // height: 500px;
       // height: 50%;
       margin-left: auto;
       margin-right: auto;
-      padding-top: 50px;
+      padding-top: 5%;
 
       &__title {
         width: 100%;
@@ -396,7 +359,7 @@
 
 
         &__top {
-          background-color: paleturquoise;
+          background-color: $thingray;
           width: 100%;
           // height: 100%;
           padding-left: 80px;
@@ -405,7 +368,7 @@
           justify-content: space-evenly;
 
           &__list {
-            background-color: lightskyblue;
+            background-color: $white;
             width: 25%;
             margin: 5px;
             position: relative;
@@ -424,7 +387,7 @@
               }
 
               &__data {
-                background-color: oldlace;
+                background-color: $white;
                 width: 100%;
                 top: 100%;
                 padding-left: 20px;
@@ -456,17 +419,6 @@
                   font-size: 10px;
                 }
               }
-
-          }
-
-          &__second {
-            width: 25%;
-            height: 100%;
-          }
-
-          &__third {
-            width: 25%;
-            height: 100%;
           }
         }
     }
