@@ -42,6 +42,13 @@
         .main__content__show__text3--input.icon-relative
           = f.collection_select :parent_ids, Parent.all, :id, :name, {prompt: "選択してください"}, class: "main__content__name__text"
           = icon('fa_icon' "chevron-down", class: "identification__form-icon")
+        .main__content__show__title
+          .main__content__show__title__subname
+            ブランド
+          .main__content__show__title__subgray
+            任意
+        .main__content__show__text3--input.icon-relative
+          = f.text_field :brand, autofocus: true, placeholder: '  例）シャネル', class: "main__content__name__text"
         .main__content__show__state
           .main__content__show__state__subname
             商品の状態
