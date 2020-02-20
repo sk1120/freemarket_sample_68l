@@ -1,4 +1,9 @@
 $(function(){
+  Dropzone.autoDiscover = false;
+  $(".dropzone").dropzone({
+      maxFilesize: 1,
+      addRemoveLinks: true
+  );
   $('#price_calc').on('input', function(){   
     var data = $('#price_calc').val(); 
     var profit = Math.round(data * 0.9)  

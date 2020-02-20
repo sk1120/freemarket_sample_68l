@@ -17,17 +17,6 @@
         = form_for(ItemImage.new, html: {multipart: true, class: "dropzone"}) do |f|
           .fallback
             = f.file_field :file_name, multiple: true, class: "fallback__file"
-        :javascript
-          $(function() {
-            // disable auto discover
-            Dropzone.autoDiscover = false;
-
-            $(".dropzone").dropzone({
-              maxFilesize: 1,
-              addRemoveLinks: true
-            });
-          });
-
     .main__content__name
       .main__content__name__title
         .main__content__name__title__subname
