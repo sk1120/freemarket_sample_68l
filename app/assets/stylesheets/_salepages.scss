@@ -211,16 +211,22 @@
           padding-bottom: 24px;
           &__left {
             font-size: 16px;
-            font-weight: bold;
+            display: flex;
+            line-break: 50px;
+            &__a{
+              font-weight: bold;
+            }
+            &__b{
+              background-color: #ea352d;
+              color: $white;
+              font-size: 12px;
+              border-radius: 2px;
+              padding: 2px 4px;
+              height: 22px;
+              margin-left: 8px;
+            }
           }
-          &__center {
-            background-color: #ea352d;
-            color: $white;
-            margin-right: 480px;
-            padding: 2px 4px;
-            border-radius: 2px;
-            font-size: 12px;
-            vertical-align: top;
+          &__right {
           }
         }
         &__commission {

@@ -7,6 +7,7 @@ class ItemsController < ApplicationController
   def new
     @item = Item.new
     @item.item_images.new
+    @parents = Category.all.order("id ASC").limit(13)
   end
 
   def create
@@ -29,6 +30,6 @@ class ItemsController < ApplicationController
 
   private
   def item_params
-    params.require(:item).permit(:name, :price, images_attributes: [:src])
+    params.require(:item).permit(:name, :text, :saler_id, :buyer_id, :brand_id, :category_id, :condition, :potage, :shipping_means, :region, :shipping_date, :price, images_attributes: [:src])
   end
 end
