@@ -16,7 +16,23 @@
       height: 200px;
       width: 100%;
       border-bottom: 1px solid #f5f5f5;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      &__item {
+        height: 200px;
+        width: 45%;
+        display: flex;
+        justify-content: space-between;
+        &__image {
+          height: 80px;
+          width: 80px;
+          background-color: yellowgreen;
+          margin-top: 60px;
+        }
+        &__detail {
+          margin-top: 60px;
+        }
+      }
     }
     &__price-box {
       padding-bottom: 48px;
@@ -56,7 +72,8 @@
           font-weight: bold;
         }
         &__bottom {
-          margin-right: 340px;
+          margin-right: 160px;
+          color: #0099e8;
         }
       }
       &__delivery {
@@ -70,7 +87,8 @@
           font-weight: bold;
         }
         &__bottom {
-          margin-right: 340px;
+          margin-right: 160px;
+          color: #0099e8;
         }
       }
       &__buy {

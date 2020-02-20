@@ -8,6 +8,12 @@
       購入内容の確認
     .main__contents__item-box
       .main__contents__item-box__item
+        .main__contents__item-box__item__image
+        .main__contents__item-box__item__detail
+          .main__contents__item-box__item__detail__name
+            CHANEL ヴィタミエールグロウ
+          .main__contents__item-box__item__detail__price
+            ¥630 （税込）送料込み
     .main__contents__price-box
       .main__contents__price-box__price
         .main__contents__price-box__price__top
@@ -21,11 +27,11 @@
         .main__contents__price-box__way__top
           支払い方法
         .main__contents__price-box__way__bottom
-          登録してください
+          = link_to "登録してください", new_credit_card_mainpages_path, class: "main__contents__price-box__way__bottom"
       .main__contents__price-box__delivery
         .main__contents__price-box__delivery__top
           配送先
         .main__contents__price-box__delivery__bottom
-          登録してください
+          -# = link_to "登録してください", deliver_addresses_path, class: "main__contents__price-box__delivery__bottom"
       .main__contents__price-box__buy
         購入する
