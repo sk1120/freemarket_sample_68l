@@ -11,5 +11,6 @@ Rails.application.routes.draw do
     post 'deliver_addresses', to: 'users/registrations#create_address'
   end
   resources :items
+  resources :salepages,only: [:create]
   
 end

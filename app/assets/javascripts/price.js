@@ -15,10 +15,10 @@ $(function(){
   })
 })
 
-$(function(){
-  Dropzone.autoDiscover = false;
-  $(".dropzone").dropzone({
-      maxFilesize: 1,
-      addRemoveLinks: true
-  });
-})
+// $(function(){
+//   Dropzone.autoDiscover = false;
+//   $(".dropzone").dropzone({
+//       maxFilesize: 1,
+//       addRemoveLinks: true
+//   });
+// })

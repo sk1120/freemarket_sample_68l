@@ -3,7 +3,7 @@ class Item < ApplicationRecord
   belongs_to :buyer, class_name: "User"
   belongs_to :brand
   belongs_to :category
-  has_many :item_images
+  has_many :item_images , dependent: :destroy
   accepts_nested_attributes_for :item_images, allow_destroy: true
 
   extend ActiveHash::Associations::ActiveRecordExtensions

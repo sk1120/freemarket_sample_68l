@@ -1,4 +1,4 @@
-class Shipping_means < ActiveHash::Base
+class ShippingMeans < ActiveHash::Base
   self.data = [
       {id: 1, means: '未定'}, {id: 2, means: 'らくらくメルカリ便'}, {id: 3, means: 'ゆうメール'},
       {id: 4, means: 'レターパック'}, {id: 5, means: '普通郵便（定形・定形外）'}, {id: 6, means: 'ゆうメール'},
