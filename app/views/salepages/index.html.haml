@@ -3,102 +3,103 @@
     = link_to '#' do
       = image_tag 'logo.png', class: "header__logo--image"
 .main
-  .main__title
-    商品の情報を入力
-  .main__image
-    .main__image__title
-      .main__image__title__name
-        出品画像
-      .main__image__title__sub
-        必須
-    .main__image__text
-      最大10枚までアップロードできます
-    .main__image__drop
-      .main__image__drop__box
-      = form_for(ItemImage.new, html: {multipart: true, class: "dropzone"}) do |f|
-        .fallback
-          = f.file_field :file_name, multiple: true
-      :javascript
-        $(function() {
-          // disable auto discover
-          Dropzone.autoDiscover = false;
-
-          $(".dropzone").dropzone({
-            maxFilesize: 1,
-            addRemoveLinks: true
-          });
-        });
-
-  .main__name
-    .main__name__title
-      .main__name__title__subname
-        商品名
-      .main__name__title__sub
-        必須
-    %input.main__name__text{:name => "main__name__text", :placeholder => "商品名（必須40文字まで）",:type => "text"}/
-    .main__name__description
-      .main__name__description__subname
-        商品の説明
-      .main__name__description__sub
-        必須
-    %input.main__name__text2{:cols => "20", :name => "main__name__text2", :placeholder => "商品の説明（必須1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。",:rows => "5"}/
-  .main__show
-    .main__show__item
-      商品の詳細
-    .main__show__title
-      .main__show__title__subname
-        カテゴリー
-      .main__show__title__sub
-        必須
-    %input.main__show__text3{:name => "main__show__text3", :placeholder => "---",:type => "text"}/
-    .main__show__state
-      .main__show__state__subname
-        商品の状態
-      .main__show__state__sub
-        必須
-    %input.main__show__text4{:name => "main__show__text4", :placeholder => "---",:type => "text"}/
-  .main__delivery
-    .main__delivery__item
-      配送について
-    .main__delivery__title
-      .main__delivery__title__subname
-        配送料の負担
-      .main__delivery__title__sub
-        必須
-    %input.main__delivery__text5{:name => "main__delivery__text5", :placeholder => "---",:type => "text"}/
-    .main__delivery__area
-      .main__delivery__area__subname
-        発送元の地域
-      .main__delivery__area__sub
-        必須
-    %input.main__delivery__text6{:name => "main__delivery__text6", :placeholder => "---",:type => "text"}/
-    .main__delivery__day
-      .main__delivery__day__subname
-        発送までの日数
-      .main__delivery__day__sub
-        必須
-    %input.main__delivery__text7{:name => "main__delivery__text7", :placeholder => "---",:type => "text"}/
-  .main__price
-    .main__price__item
-      販売価格（300〜9,999,999）
-    .main__price__box
-      .main__price__box__top
-        .main__price__box__top__left
-          価格
-        .main__price__box__top__center
+  .main__content
+    .main__content__image
+      .main__content__image__title
+        .main__content__image__title__name
+          出品画像
+        .main__content__image__title__sub
           必須
-        %input#price_calc.main__price__box__top__right{:name => "main__price__box__top__right", :placeholder => "例）300",:type => "number"}/
-      .main__price__box__commission
-        販売手数料（10%)
-        .main__price__box__commission__bar
-      .main__price__box__profit
-        販売利益
-        .main__price__box__profit__bar_2
-  .main__bottom
-    .main__bottom__text
-      %p 禁止されている出品、行為を必ずご確認ください。またブランド品でシリアルナンバー等がある場合はご記載ください。偽ブランドの販売は犯罪であり処罰される可能性があります。
-      %p また、出品をもちまして加盟店規約に同意したことになります。
-    .main__bottom__send
-      出品する
-    .main__bottom__return
-      もどる
+      .main__content__image__text
+        最大10枚までアップロードできます。下記部分をドラッグアンドドロップまたはクリックしてファイルをアップロード。
+      .main__content__image__drop
+        .main__content__image__drop__box
+        = form_for(ItemImage.new, html: {multipart: true, class: "dropzone"}) do |f|
+          .fallback
+            = f.file_field :file_name, multiple: true, class: "fallback__file"
+        :javascript
+          $(function() {
+            // disable auto discover
+            Dropzone.autoDiscover = false;
+
+            $(".dropzone").dropzone({
+              maxFilesize: 1,
+              addRemoveLinks: true
+            });
+          });
+
+    .main__content__name
+      .main__content__name__title
+        .main__content__name__title__subname
+          商品名
+        .main__content__name__title__sub
+          必須
+      %input.main__content__name__text{:name => "main__name__text", :placeholder => "商品名（必須40文字まで）",:type => "text"}/
+      .main__content__name__description
+        .main__content__name__description__subname
+          商品の説明
+        .main__content__name__description__sub
+          必須
+      %input.main__content__name__text2{:cols => "10", :name => "main__name__text2", :placeholder => "商品の説明（必須1,000文字以内）（色、素材、重さ、定価、注意点など）",:rows => "5"}/
+    .main__content__show
+      .main__content__show__item
+        商品の詳細
+      .main__content__show__title
+        .main__content__show__title__subname
+          カテゴリー
+        .main__content__show__title__sub
+          必須
+      %input.main__content__show__text3{:name => "main__show__text3", :placeholder => "---",:type => "text"}/
+      .main__content__show__state
+        .main__content__show__state__subname
+          商品の状態
+        .main__content__show__state__sub
+          必須
+      %input.main__content__show__text4{:name => "main__show__text4", :placeholder => "---",:type => "text"}/
+    .main__content__delivery
+      .main__content__delivery__item
+        配送について
+      .main__content__delivery__title
+        .main__content__delivery__title__subname
+          配送料の負担
+        .main__content__delivery__title__sub
+          必須
+      %input.main__content__delivery__text5{:name => "main__delivery__text5", :placeholder => "---",:type => "text"}/
+      .main__content__delivery__area
+        .main__content__delivery__area__subname
+          発送元の地域
+        .main__content__delivery__area__sub
+          必須
+      %input.main__content__delivery__text6{:name => "main__delivery__text6", :placeholder => "---",:type => "text"}/
+      .main__content__delivery__day
+        .main__content__delivery__day__subname
+          発送までの日数
+        .main__content__delivery__day__sub
+          必須
+      %input.main__content__delivery__text7{:name => "main__delivery__text7", :placeholder => "---",:type => "text"}/
+    .main__content__price
+      .main__content__price__item
+        販売価格（300〜9,999,999）
+      .main__content__price__box
+        .main__content__price__box__top
+          .main__content__price__box__top__left
+            価格
+          .main__content__price__box__top__center
+            必須
+          .main__content__price__box__top__middle-center
+            ￥
+          %input#price_calc.main__content__price__box__top__right{:name => "main__price__box__top__right", :placeholder => "例）300",:type => "number"}/
+        .main__content__price__box__commission
+          販売手数料（10%)
+          .main__content__price__box__commission__bar
+        .main__content__price__box__profit
+          販売利益
+          .main__content__price__box__profit__bar_2
+    .main__content__bottom
+      .main__content__bottom__text
+        %p 禁止されている出品、行為を必ずご確認ください。またブランド品でシリアルナンバー等がある場合はご記載ください。偽ブランドの販売は犯罪であり処罰される可能性があります。
+        %p また、出品をもちまして加盟店規約に同意したことになります。
+      .main__content__bottom__send
+        出品する
+      .main__content__bottom__return
+        もどる
