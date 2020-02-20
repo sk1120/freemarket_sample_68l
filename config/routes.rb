@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     get 'deliver_addresses', to: 'users/registrations#new_address'
     post 'deliver_addresses', to: 'users/registrations#create_address'
   end
-  root "mainpages#index"
+  root "buys#index"
   resources :mainpages do
     collection do
       get 'logout'
