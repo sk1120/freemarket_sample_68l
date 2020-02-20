@@ -28,35 +28,38 @@
             addRemoveLinks: true
           });
         });
-
+= form_with model: @item,local: true do |f|
   .main__name
     .main__name__title
-      .main__name__title__subname
-        商品名
-      .main__name__title__sub
-        必須
-    %input.main__name__text{:name => "main__name__text", :placeholder => "商品名（必須40文字まで）",:type => "text"}/
-    .main__name__description
-      .main__name__description__subname
+      .main__name__title__name
+        ニックネーム
+        %span.main__name__title__sub 必須
+        %br/
+        = f.text_field :name, autofocus: true, placeholder: '商品名（必須40文字まで）', class: "field__input"
+        .field
         商品の説明
-      .main__name__description__sub
-        必須
-    %input.main__name__text2{:cols => "20", :name => "main__name__text2", :placeholder => "商品の説明（必須1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。",:rows => "5"}/
+        %span.main__name__title__sub 必須
+        %br/
+        = f.text_field :text, autofocus: true, placeholder: '商品の説明（必須1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。', class: "field__input"
   .main__show
     .main__show__item
       商品の詳細
     .main__show__title
       .main__show__title__subname
-        カテゴリー
-      .main__show__title__sub
+        カテゴリ
+      .main__show__title__sub 
         必須
-    %input.main__show__text3{:name => "main__show__text3", :placeholder => "---",:type => "text"}/
+    .main__show__title--input.icon-relative
+      = f.collection_select :category_id, Category.all, :id, :category, prompt: "選択してください", class: 'input'
+      = icon('fa_icon' "chevron-down", class: "identification__form-icon")
     .main__show__state
       .main__show__state__subname
         商品の状態
       .main__show__state__sub
         必須
-    %input.main__show__text4{:name => "main__show__text4", :placeholder => "---",:type => "text"}/
+    .main__show__state--input.icon-relative
+      = f.collection_select :condition_id, Condition.all, :id, :condition, prompt: "選択してください", class: 'input'
+      = icon('fa_icon' "chevron-down", class: "identification__form-icon")
   .main__delivery
     .main__delivery__item
       配送について
@@ -65,19 +68,25 @@
         配送料の負担
       .main__delivery__title__sub
         必須
-    %input.main__delivery__text5{:name => "main__delivery__text5", :placeholder => "---",:type => "text"}/
+    .main__delivery__title--input.icon-relative
+      = f.collection_select :postage_id, Postage.all, :id, :postage, prompt: "選択してください", class: 'input'
+      = icon('fa_icon' "chevron-down", class: "identification__form-icon")
     .main__delivery__area
       .main__delivery__area__subname
         発送元の地域
       .main__delivery__area__sub
         必須
-    %input.main__delivery__text6{:name => "main__delivery__text6", :placeholder => "---",:type => "text"}/
+    .main__delivery__area--input.icon-relative
+      = f.collection_select :prefecture_id, Prefecture.all, :id, :name, prompt: "選択してください", class: 'input'
+      = icon('fa_icon' "chevron-down", class: "identification__form-icon")
     .main__delivery__day
       .main__delivery__day__subname
         発送までの日数
       .main__delivery__day__sub
         必須
-    %input.main__delivery__text7{:name => "main__delivery__text7", :placeholder => "---",:type => "text"}/
+    .main__delivery__day--input.icon-relative
+      = f.collection_select :shipping_date_id, Shipping_date.all, :id, :date, prompt: "選択してください", class: 'input'
+      = icon('fa_icon' "chevron-down", class: "identification__form-icon")
   .main__price
     .main__price__item
       販売価格（300〜9,999,999）
