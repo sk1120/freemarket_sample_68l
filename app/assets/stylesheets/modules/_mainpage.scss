@@ -27,7 +27,7 @@
     color: $white;
     text-shadow: 0 0 5px dimgray;
     padding-left: 90px;
-    padding-top: 20%;
+    padding-top: 200px;
 
     &__title {
       font-size: 60px;
@@ -238,7 +238,6 @@
     background-color: peachpuff;
     width: 100vw;
     // height: 1000px;
-    
     // padding-left: 50px;
     // padding-right: 50px;
     // margin-top: 50px;
@@ -247,8 +246,9 @@
     .pickupcategory {
       background-color: royalblue;
       width: 100%;
-      // height: 50%;
+      // height: 100%;
       height: 600px;
+
       margin-left: auto;
       margin-right: auto;
       padding-top: 50px;
@@ -276,6 +276,7 @@
 
       &__items {
         width: 100%;
+        // height: 100%;
         // height: 350px;
       }
 
@@ -283,7 +284,7 @@
           background-color: mediumpurple;
           width: 100%;
           // width: 900px;
-          // height: 100%;
+          height: 100%;
           // height: calc(100% - 50px - 30px);
           // margin-left: 20px;
           // margin-right: 20px;
@@ -297,10 +298,9 @@
         //   width: 900px;
         // }
 
-          &__first {
+          &__list {
             background-color: powderblue;
             width: 25%;
-            // height: 100%;
             margin: 5px;
             position: relative;
 
@@ -325,6 +325,7 @@
                 top: 100%;
                 padding-left: 20px;
                 padding-right: 20px;
+                padding-bottom: 10px;
                 position: absolute;
                 // display: flex;
 
@@ -347,120 +348,6 @@
                   &__likes {
                     font-size: 14px;
                     // padding-right: 20px;
-                  }
-                }
-
-                p {
-                  font-size: 10px;
-                }
-              }
-          }
-
-          &__second {
-            background-color: lavender;
-            width: 25%;
-            // height: 100%;
-            margin: 5px;
-            position: relative;
-
-            a {
-              color: $thickgray;
-            }
-
-              &__img {
-                // width: 200px;
-                // height: 100%;
-                display: block;
-                width: 90%;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: 10%;
-              }
-
-              &__data {
-                background-color: oldlace;
-                width: 100%;
-                top: 100%;
-                padding-left: 20px;
-                padding-right: 20px;
-                position: absolute;
-                // display: flex;
-
-                &__name {
-                  padding-top: 10px;
-                  margin-bottom: 10px;
-                  font-size: 16px;
-                }
-
-                &__details {
-                  width: 100%;
-                  display: flex;
-                  justify-content: space-between;
-
-                  &__price {
-                    font-size: 16px;
-                    // padding-left: 20px;
-                  }
-
-                  &__likes {
-                    font-size: 14px;
-                    // padding-right: 20px;
-                  }
-
-                }
-
-                p {
-                  font-size: 10px;
-                }
-
-              }
-          
-          }
-
-          &__third {
-            background-color: lightskyblue;
-            width: 25%;
-            margin: 5px;
-            position: relative;
-
-            a {
-              color: $thickgray;
-            }
-
-              &__img {
-                display: block;
-                width: 90%;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: 10%;
-                
-              }
-
-              &__data {
-                background-color: oldlace;
-                width: 100%;
-                top: 100%;
-                padding-left: 20px;
-                padding-right: 20px;
-                position: absolute;
-
-                &__name {
-                  padding-top: 10px;
-                  margin-bottom: 10px;
-                  font-size: 16px;
-                }
-
-                &__details {
-                  width: 100%;
-                  display: flex;
-                  justify-content: space-between;
-
-                  &__price {
-                    font-size: 16px;
-                  }
-
-                  &__likes {
-                    font-size: 14px;
                   }
                 }
 
@@ -517,7 +404,7 @@
           display: flex;
           justify-content: space-evenly;
 
-          &__first {
+          &__list {
             background-color: lightskyblue;
             width: 25%;
             margin: 5px;
@@ -542,6 +429,7 @@
                 top: 100%;
                 padding-left: 20px;
                 padding-right: 20px;
+                padding-bottom: 10px;
                 position: absolute;
 
                 &__name {
