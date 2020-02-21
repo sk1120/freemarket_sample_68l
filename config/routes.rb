@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  # root "mainpage#index"
+
   devise_for :users, controllers: {
     registrations: 'users/registrations',
   }
@@ -7,6 +10,7 @@ Rails.application.routes.draw do
     post 'deliver_addresses', to: 'users/registrations#create_address'
   end
   root "mainpages#index"
+
   resources :mainpages do
     collection do
       get 'logout'
