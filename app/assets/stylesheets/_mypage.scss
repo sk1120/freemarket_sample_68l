@@ -1,0 +1,316 @@
+.header{
+  height: 100px;
+  width: 100vw;
+  background-color: blue;
+}
+
+.my_page{
+  .main{
+    width: 100vw;
+    height: 1600px;
+    background-color: $thingray;
+    padding: 40px 0;
+    .contents{
+      width: 1020px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      &__list{
+        width: 280px;
+        ul{
+          li{
+            height: 48px;
+            width: 100%;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1px;
+            a{
+              height:100%;
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              text-decoration: none;
+              i{
+                font-size: 17px;
+                color: black;
+                margin-right: 25px;
+              }
+              p{
+                font-size: 15px;
+                color: black;
+                margin-left: 20px;
+              }
+            }
+            
+          }
+        }
+        h1{
+          margin: 30px 0 3px 4px;
+          font-weight: bold;
+        }
+        
+      }
+    }
+  }
+}
+
+.contents__content{
+  width: 700px;
+  &__user_icon{
+    height: 200px;
+    width: 100%;
+    background-image: image-url("water-1330252_1920.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    color: $white;
+    a{
+      position: absolute;
+      top: 0;
+      left: 0px;
+      height:100%;
+      width: 100%;
+    }
+    h1{
+      font-size: 30px;
+    }
+  }
+  &__change_2{
+    display: flex;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    &--select{
+      z-index: 1;
+      width: 50%;
+      cursor: pointer;
+      background-color: rgb(243, 243, 243);
+      line-height: 80px;
+      font-weight: bold;
+      font-size: 17px;
+      display: inline-block;
+      ul{
+        position: absolute;
+        width: 100%;
+        top: 80px;
+        left: 0px;
+        display: none;
+        line-height: 0;
+        .list_content{
+          width: 100%;
+          height: 80px;
+          padding: 0 30px 0 20px;
+          background-color: $white;
+          margin-bottom: 1px;
+          display: flex;
+          align-items: center;
+          .list_image{
+            img{
+              width: 50px;
+              height: 50px;
+            }
+          }
+          .list_text{
+            width: 100%;
+            height: 50px;
+            padding-left: 20px;
+            &--text{
+              height: 50%;
+              width: 100%;
+              p{
+                line-height: initial;
+                margin: 0 auto 0 0 ;
+                text-align: left;
+              }
+            }
+            &--time{
+              height: 50%;
+              width: 100%;
+              position: relative;
+              .fa-clock{
+                vertical-align: middle;
+                position: absolute;
+                top: 4px;
+                left: 0px;
+              }
+              p{
+                line-height: initial;
+                text-align: left;
+                margin-left: 30px;
+              }
+            }
+          }
+          .list_icon{
+            width: 50px;
+            height: 50px;
+            margin: 0 0 0 auto;
+            position: relative;
+            .fa-chevron-right{
+              position: absolute;
+              top: 12px;
+              font-size: 30px;
+            }
+          }
+        }
+        .list_not_exist{
+          width: 100%;
+          height: 280px;
+          background-color: $white;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-evenly;
+          margin-bottom: 5px;
+          img{
+            width: 400px;
+          }
+        }
+      }
+    }
+  }
+  &__index{
+    width: 100%;
+    height: 100px;
+    background-color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    &--area{
+      width: 100%;
+      height: 100%;
+      background-color: rgb(243, 243, 243);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: initial;
+      text-decoration: none;
+      color: black;
+    }
+    .logout{
+      background-color: red;
+      color: $white;
+      width: 52%;
+      height: 81%;
+    }
+  }
+  &__bought_items_title{
+    position: unset;
+    width: 100%;
+    height: 80px;
+    background-color: $white;
+    margin-top: 550px;
+    h1{
+      margin-left: 20px;
+      line-height: 80px;
+      font-size: 17px;
+      font-weight: bold;
+    }
+  }
+  .new_credit_title{
+    width: 100%;
+    height: 60px;
+    background-color: $white;
+    margin-bottom: 2px;
+    h1{
+      text-align: center;
+      line-height: 60px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+  .new_credit_form_wrapper{
+    width: 100%;
+    background-color: $white;
+    &__contents{
+      width: 54%;
+      height: 100%;
+      margin: 0 auto;
+      .credit_form_title{
+        padding: 30px 0 5px 0 ;
+        display: flex;
+        font-size: 15px;
+        align-items: center;
+        .title{
+          margin-left: 10px;
+        }
+        .necesary{
+          background-color: red;
+          color: $white;
+          margin-left: 10px;
+          border-radius: 3px;
+          padding: 2px 3px;
+        }
+      }
+      .credit_form_cards{
+        width: 100%;
+        display: flex;
+        margin-top: 5px;
+        img{
+          width: 47px;
+          margin-right: 12px;
+        }
+      }
+      .credit_form_text{
+        width: 100%;
+        height: 50px;
+        border: 1px solid rgb(190, 188, 188);
+        border-radius: 3px;
+        padding-left: 15px;
+      }
+      .credit_form_date{
+        width: 100%;
+        .credit_form_select{
+          width: 30%;
+          height: 50px;
+          background-color: $white;
+        }
+        span{
+          margin: 0 10px;
+        }
+      }
+      .credit_form_submit{
+        border-style: none;
+        border: 1px solid rgb(190, 188, 188);
+        width: 100%;
+        height: 50px;
+        cursor: pointer;
+        background-color: red;
+        color: $white;
+        margin: 30px 0 80px 0;
+      }
+    }
+  }
+}
+
+.app__footer{
+  height: 500px;
+  width: 100vw;
+  background-color: green;
+}
+
+.footer{
+  height: 500px;
+  width: 100vw;
+  background-color: black;
+}
+
+.active{
+  background-color: $white;
+  border-top: 2px solid red;
+  ul{
+    display: block;
+    cursor: default;
+  }
+}
+
+
+
+
+

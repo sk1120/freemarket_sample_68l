@@ -79,4 +79,4 @@ gem 'font-awesome-sass'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'haml-rails'
-
+gem 'bxslider-rails'
