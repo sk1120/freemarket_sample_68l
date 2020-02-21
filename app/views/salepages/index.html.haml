@@ -24,14 +24,15 @@
             商品名
           .main__content__name__title__sub
             必須
-        = f.text_field :name, autofocus: true, placeholder: '商品名（必須40文字まで）', class: "main__content__name__text"
+        = f.text_field :name, autofocus: true, placeholder: '  商品名（40文字まで）', class: "main__content__name__text"
         .main__content__name__description
-          .main__content__name__description__subname
+          .main__content__show__title__subname
             商品の説明
           .main__content__name__description__sub
             必須
-        = f.text_field :text, autofocus: true, placeholder: '商品の説明（必須1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。', class: "main__content__name__text2"
+        = f.text_field :text, autofocus: true,  class: "main__content__name__text2", placeholder: '  商品の説明（1,000文字以内）（色、素材、重さ、定価、注意点など）'
       .main__content__show
+        
         .main__content__show__item
           商品の詳細
         .main__content__show__title
@@ -40,6 +41,15 @@
           .main__content__show__title__sub
             必須
         .main__content__show__text3--input.icon-relative
+          -# .listing-form-box
+          -#   .listing-product-detail__category
+          -#     = f.label 'カテゴリー', class: 'listing-default__label'
+          -#     %span.listing-default--require 必須
+          -#     .listing-select-wrapper
+          -#       .listing-select-wrapper__box
+                  //親カテゴリーのセレクトボックスの生成
+                  -# = f.select :category, @category_parent_array, {}, {class: 'listing-select-wrapper__box--select', id: 'parent_category'}
+                  -# %i.fas.fa-chevron-down.listing-select-wrapper__box--arrow-down
           = f.collection_select :parent_ids, Parent.all, :id, :name, {prompt: "選択してください"}, class: "main__content__name__text"
           = icon('fa_icon' "chevron-down", class: "identification__form-icon")
         .main__content__show__title
@@ -50,7 +60,7 @@
         .main__content__show__text3--input.icon-relative
           = f.text_field :brand, autofocus: true, placeholder: '  例）シャネル', class: "main__content__name__text"
         .main__content__show__state
-          .main__content__show__state__subname
+          .main__content__show__title__subname
             商品の状態
           .main__content__show__state__sub
             必須
@@ -68,7 +78,7 @@
         .main__content__delivery__text5--input.icon-relative
           = f.collection_select :postage_id, Postage.all, :id, :postage, {prompt: "選択してください"}, class: 'main__content__name__text'
           = icon('fa_icon' "chevron-down", class: "identification__form-icon")
-        -# .main__content__delivery__title  ※「送料込み（出品者負担）」押されたら表示させる
+        -# .main__content__delivery__title  
         -#   .main__content__delivery__title__subname
         -#     発送方法
         -#   .main__content__delivery__title__sub
@@ -90,7 +100,7 @@
           .main__content__delivery__day__sub
             必須
         .main__content__delivery__text7--input.icon-relative
-          = f.collection_select :shipping_date_id, Shipping_date.all, :id, :date, {prompt: "選択してください"}, class: 'main__content__name__text'
+          = f.collection_select :shipping_date_id, ShippingDate.all, :id, :date, {prompt: "選択してください"}, class: 'main__content__name__text'
           = icon('fa_icon' "chevron-down", class: "identification__form-icon")
       .main__content__price
         .main__content__price__item
