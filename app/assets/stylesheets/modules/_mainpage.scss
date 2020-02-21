@@ -39,7 +39,6 @@
     list-style: none;
     background-color: $white;
     width: 100vw;
-    // height: 700px;
 
     &__title {
       height: 100px;
@@ -59,10 +58,7 @@
     }
 
     &__list {
-      // height: 500px;
       width: 100%;
-      // padding-left: 10px;
-      // padding-right: 10px;
       display: flex;
       justify-content: space-evenly;
       padding-bottom: 50px;
@@ -72,12 +68,10 @@
         width: 25%;
 
         &__image {
-          // height: 100%;
           width: 100%;
           position: relative;
 
           &__img {
-            // height: 100%;
             width: 100%;
           }
 
@@ -95,7 +89,6 @@
         }
 
         &__title {
-          // height: 60px;
           width: 100%;
           margin-bottom: 30px;
           font-size: 24px;
@@ -162,7 +155,6 @@
     list-style: none;
     background-color: $white;
     width: 100vw;
-    // height: 700px;
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 30px;
@@ -229,16 +221,11 @@
     background-color: $thingray;
     width: 100vw;
     padding-bottom: 5%;
-    // height: 1000px;
-    // padding-left: 50px;
-    // padding-right: 50px;
-    // margin-top: 50px;
   }
 
     .pickupcategory {
       background-color: $thingray;
       width: 100%;
-      // height: 100%;
       height: 600px;
 
       margin-left: auto;
@@ -268,27 +255,16 @@
 
       &__items {
         width: 100%;
-        // height: 100%;
-        // height: 350px;
       }
 
         &__top {
           background-color: $thingray;
           width: 100%;
-          // width: 900px;
           height: 100%;
-          // height: calc(100% - 50px - 30px);
-          // margin-left: 20px;
-          // margin-right: 20px;
           padding-left: 80px;
           padding-right: 80px;
           display: flex;
           justify-content: space-evenly;
-          // float: left;
-
-        // #grid {
-        //   width: 900px;
-        // }
 
           &__list {
             background-color: $white;
@@ -301,8 +277,6 @@
             }
 
               &__img {
-                // width: 200px;
-                // height: 100%;
                 display: block;
                 width: 90%;
                 margin-left: auto;
@@ -319,7 +293,6 @@
                 padding-right: 20px;
                 padding-bottom: 10px;
                 position: absolute;
-                // display: flex;
 
                 &__name {
                   padding-top: 10px;
@@ -334,12 +307,10 @@
 
                   &__price {
                     font-size: 16px;
-                    // padding-left: 20px;
                   }
 
                   &__likes {
                     font-size: 14px;
-                    // padding-right: 20px;
                   }
                 }
 
@@ -355,8 +326,6 @@
       background-color: $thingray;
       width: 100%;
       height: 600px;
-      // height: 500px;
-      // height: 50%;
       margin-left: auto;
       margin-right: auto;
       padding-top: 5%;
@@ -390,7 +359,6 @@
         &__top {
           background-color: $thingray;
           width: 100%;
-          // height: 100%;
           padding-left: 80px;
           padding-right: 80px;
           display: flex;
@@ -454,10 +422,6 @@
   
 
 .SellBtn {
-  // position: fixed;
-  // background-color: mediumturquoise;
-  // color: papayawhip;
-  // z-index: 1;
   top: calc(100vh - 140px);
   left: calc(100vw - 180px);
 
@@ -466,7 +430,6 @@
     color: $white;
     top: calc(100vh - 140px);
     left: calc(100vw - 180px);
-    // right: 70px;
     width: 110px;
     height: 20px;
     z-index: 1;
@@ -480,15 +443,11 @@
     color: papayawhip;
     top: calc(100vh - 140px);
     left: calc(100vw - 180px);
-    // top: 600px;
-    // right: 70px;
     padding-left: 30px;
     padding-top: 40px;
     text-decoration: none;
     width: 110px;
     height: 110px;
-    // position: relative;
-    // z-index: 1;
 
     &__icon {
       width: 50px;
