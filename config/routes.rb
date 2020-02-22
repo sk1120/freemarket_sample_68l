@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   resources :items
   resources :salepages,only: [:create] do
     collection do
-      get 'ancestry_chilldren'
+      get 'ancestry_children'
+      get 'ancestry_grand_children'
     end
   end
 end

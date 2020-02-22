@@ -5,8 +5,14 @@ class SalepagesController < ApplicationController
     # binding.pry
   end
 
-  def create
-    redirect_to root_path
+  def ancestry_children
+    parent = Category.find(params[:category_id])
+    @category_children = parent.children
+  end
+
+  def ancestry_grand_children
+    child = Category.find(params[:child_id])
+    @category_grand_children = child.children
   end
 
   private

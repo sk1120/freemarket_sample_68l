@@ -236,7 +236,7 @@
               margin-left: 8px;
             }
           }
-          &__right {
+          &__right{
           }
         }
         &__commission {
@@ -277,4 +277,12 @@
       }
     }
   }
+}
+
+.shipping_mean_title{
+  display: none;
+}
+
+.shipping_mean_form{
+  display: none;
 }

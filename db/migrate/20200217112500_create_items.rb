@@ -8,11 +8,12 @@ class CreateItems < ActiveRecord::Migration[5.2]
       # t.references :category, null: false, foreign_key: { to_table: :categories}
       # t.references :brand, null: false, foreign_key: { to_table: :brands}
 
-      t.integer :condition, null: false
-      t.string :postage, null: false
-      t.string :shipping_means, null: false
-      t.string :region, null: false
-      t.string :shipping_date, null: false
+      t.string :condition, null: false,default: "0"
+      t.string :postage, null: false,default: "0"
+      t.string :shipping_means
+      t.integer :prefecture_id, null: false
+      t.integer :buyer_id
+      t.string :shipping_date, null: false,default: "0"
       t.text :text, null: false
       t.integer :price, null: false
       t.timestamps
