@@ -1,0 +1,19 @@
+= render partial: 'form'
+ 
+-#  .sell__form__content.clearfix
+-#      %h3.sell__form__content__sub-head 商品の詳細
+-#      .sell__form__content-box
+-#        .form__group
+-#          = f.label :category_id do
+-#            カテゴリー
+-#            %span.form__require 必須
+-#          %div
+-#            .select-wrap
+-#              =fa_icon 'chevron-down', class: "icon-arrow-bottom"
+-#              = select :category_1,:category_1, options_from_collection_for_select(Category.all.order("id ASC").limit(13), :id, :category),{}, {class: 'item__f-select'}
+-#            .select-wrap.category-box__child
+-#              =fa_icon 'chevron-down', class: "icon-arrow-bottom"
+-#              = select :category_2,:category_2, options_from_collection_for_select(Category.where(id: @item.category.parent.id), :id, :category), {}, {class: 'item__f-select'}
+-#            .select-wrap.category-box__grandchild
+-#              =fa_icon 'chevron-down', class: "icon-arrow-bottom"
+-#              = f.select :category_id, options_from_collection_for_select(Category.where(id: @item.category_id), :id, :category), {}, {class: 'item__f-select'}

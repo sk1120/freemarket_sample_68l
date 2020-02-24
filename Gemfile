@@ -79,4 +79,8 @@ gem 'font-awesome-sass'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'haml-rails'
+gem 'ancestry'
+gem 'active_hash'
+gem 'turbolinks', '~> 5'
+
 gem 'bxslider-rails'
