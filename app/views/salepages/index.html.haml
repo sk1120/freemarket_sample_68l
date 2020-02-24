@@ -13,16 +13,32 @@
           .main__content__image__title__sub
             必須
         .main__content__image__text
-          最大10枚までアップロードできます。下記部分をドラッグアンドドロップまたはクリックしてファイルをアップロード。
+          最大10枚までアップロードできます。下記部分をクリックしてファイルをアップロード。
           
         -# .main__content__image__drop
         -#   .main__content__image__drop__box
         -#   = form_for(ItemImage.new, html: {multipart: true, class: "dropzone"}) do |f|
         -#     .fallback
         -#       = f.file_field :file_name, multiple: true, class: "fallback__file"
-        = f.fields_for :item_images,@item.item_images.build do |i|
-          =i.file_field :image_url
-          
+        #image-box
+          #previews
+            - if @item.persisted?
+              - @item.item_images.each_with_index do |item_image, i|
+                = image_tag item_image.src.url, data: { index: i }, width: "100", height: '100'
+          = f.fields_for :item_images,@item.item_images.build do |i|
+            .js-file_group{"data-index" => "#{i.index}"}
+              = i.file_field :image_url, class: 'js-file'
+              %br/
+              %span.js-remove 削除
+              - if @item.persisted?
+                = i.check_box :_destroy, data:{ index: i.index }, class: 'hidden-destroy'
+          - if @item.persisted?
+            .js-file_group{"data-index" => "#{@item.item_images.count}"}
+              = file_field_tag :image_url, name: "item[item_images_attributes][#{@item.item_images.count}][image_url]", class: 'js-file'
+              .js-remove 削除
+
+
+          -# =i.file_field :image_url
         .main__content__name
           .main__content__name__title
             .main__content__name__title__subname
