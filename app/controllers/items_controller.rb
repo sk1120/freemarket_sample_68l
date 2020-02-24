@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :set_item,only: [:edit,:update,:destroy]
 
   def index
     @items = Item.includes(:images).order('created_at DESC')
@@ -22,11 +23,9 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @item = Item.find(params[:id])
   end
 
   def update
-    @item = Item.find(params[:id])
     if @item.update(item_params)
       redirect_to root_path
     else
@@ -35,13 +34,12 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @item = Item.find(params[:id])
   end
 
   private
 
-  def convert_int(data)
-    
+  def set_item
+    @item = Item.find(params[:id])
   end
 
   def item_params
