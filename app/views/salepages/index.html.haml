@@ -60,7 +60,7 @@
               カテゴリー
             .main__content__show__title__sub
               必須
-          .main__content__show__text3--input.icon-relative.category_area.category
+          .main__content__show__text3--input.icon-relative.category_area
             = f.collection_select :category_parent_id, @categories, :id, :name, {prompt: "選択してください"}, class: "main__content__name__text category_parent"
             = icon('fa_icon' "chevron-down", class: "identification__form-icon")
           .main__content__show__title
