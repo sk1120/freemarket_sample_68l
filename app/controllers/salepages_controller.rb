@@ -2,7 +2,6 @@ class SalepagesController < ApplicationController
   def index
     @item = Item.new
     @categories = Category.all.where(ancestry: nil)
-    # binding.pry
   end
 
   def ancestry_children
