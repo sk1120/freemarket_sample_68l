@@ -1,0 +1,44 @@
+.Header
+  .header__upper
+    .title
+      =link_to "#" do
+        = image_tag 'material/logo/logo.png', class: "title__logo"
+    .searchform
+      %input{ type: "text", class: "searchform__text", placeholder: "キーワードから探す" }
+    .submit
+      %button{ type: "submit", src: "images/icon-search 1.png", class: "submitbtn__btn" } 
+        = image_tag "material/icon/icon-search 1.png", class: "submitbtn__icon"
+       
+
+  .header__lower
+    %ul.productlist
+      %li.category
+        = link_to "#" do
+          カテゴリー
+      %li.brand
+        = link_to "#" do
+          ブランド
+
+    %ul.userpage
+      %li.userpage__info
+        = link_to "#" do
+          お知らせ
+      %li.userpage__todo
+        = link_to "#" do
+          やることリスト
+      %li.userpage__mypage
+        = link_to "#" do
+          マイページ
+
+  -# 未ログインの時の表示内容
+  -#   %ul.userlogin
+  -#     %li.login
+  -#       = link_to "#" do
+  -#         ログイン
+  -#     %li.registration
+  -#       = link_to "#" do
+  -#         新規会員登録
+
+
+               
+   

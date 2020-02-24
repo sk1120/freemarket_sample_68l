@@ -1,4 +1,127 @@
-= link_to '出品', new_item_path
-%br/
-.contents
-  = render @items
+.header
+
+.show_item
+  .item_wrapper
+    %h1.item_title Ruby on Rails
+    .image_top_wrapper
+      =image_tag  "https://cdn.pixabay.com/photo/2020/02/11/21/09/bio-4840960_1280.jpg",{class: "image_top"}
+      %ul.bxslider
+        %li.image_child_wrapper
+          =image_tag "https://cdn.pixabay.com/photo/2020/01/26/22/55/road-4796107_1280.jpg",{class: "image_child"}
+        %li.image_child_wrapper
+          =image_tag "https://cdn.pixabay.com/photo/2017/08/28/17/39/poster-2690541_1280.png",{class: "image_child"}
+        %li.image_child_wrapper
+          =image_tag "https://cdn.pixabay.com/photo/2019/06/22/18/26/woman-4292185_1280.jpg",{class: "image_child"}
+        %li.image_child_wrapper
+          =image_tag "https://cdn.pixabay.com/photo/2020/02/06/21/44/rose-4825575_1280.jpg",{class: "image_child"}
+        %li.image_child_wrapper
+          =image_tag "https://cdn.pixabay.com/photo/2018/11/23/16/51/zebra-3834241_1280.jpg",{class: "image_child"}
+        %li.image_child_wrapper
+          =image_tag "https://cdn.pixabay.com/photo/2020/01/20/05/54/one-4779562_1280.jpg",{class: "image_child"}
+        %li.image_child_wrapper
+          =image_tag "https://cdn.pixabay.com/photo/2017/08/07/21/40/people-2608145_1280.jpg",{class: "image_child"}
+
+    %h1.item_price ¥10,000
+    %p (税込)送料込み
+    %h1.item_title_bottom Ruby on Rails
+    .item_table_wrapper
+      %table.item_table
+        %tr
+          %th 出品者
+          %td 
+            %p 山本俊介
+        %tr
+          %th カテゴリー
+          %td 
+            =link_to "言語","#"
+        %tr
+          %th ブランド
+          %td 
+            =link_to "メンズ","#"
+            %br
+            =link_to "Tシャツ","#"
+            %br
+            =link_to "半袖","#"
+            %br
+        %tr
+          %th 商品のサイズ
+          %td 
+            %p XXL
+        %tr
+          %th 商品の状態
+          %td 
+            %p 良い
+        %tr
+          %th 配送料の負担
+          %td 
+            %p 出品者
+        %tr
+          %th 発送元の地域
+          %td 
+            %p 東京都
+        %tr
+          %th 発送日の目安
+          %td 
+            %p 2~3日間で発送
+    .item_wrapper__options
+      =link_to "#",class: "item_favorites" do
+        %i.fas.fa-star
+        %p お気に入り
+        %p 0
+      =link_to "#",class: "report_inappropriate" do
+        %i.fas.fa-flag
+        %p 不適切な商品の通報
+
+
+
+  .item_comment_wrapper
+    .text_form_area
+      .comment_wrapper__opponent
+        .opponent_name 
+          %p 購入者
+        .comment_wrapper__opponent--text_area_opponent
+          %p.text こんにちは
+          %i.far.fa-clock 52分前
+
+      .comment_wrapper__owner
+        .owner_name 
+          %p 出品者
+          %p.owner 出品者
+        .comment_wrapper__owner--text_area_owner
+          %p.text こんにちは
+          %i.far.fa-clock 52分前
+
+      .comment_wrapper__self
+        .self_name 
+          %p 自分
+        .comment_wrapper__self--text_area_self
+          %p.text こんにちは
+          %i.far.fa-clock 52分前
+      
+      %textarea.text_form_area--form{type: "textarea",rows: "5"}
+      .caution_area
+        %p 
+          相手のことを考え丁寧なコメントを心がけましょう。
+          %br
+          不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      =button_tag type: "submit", class: "text_form_area--submit" do
+        %i.fa.fa-comment コメントする
+
+  .move_items
+    =link_to "#" do
+      =icon('fas','chevron-left')
+      %p 前の商品
+    =link_to "#" do
+      %p 次の商品
+      =icon('fas','chevron-right')
+
+  =link_to "レディースをもっと見る","#",class: "see_category"
+
+.app__footer
+  - if user_signed_in?
+    = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right--btn"
+  - else
+    = link_to "ログイン", new_user_session_path, class: "header__right--btn"
+    = link_to "新規登録", new_user_registration_path, class: "header__right--btn"
+
+.footer
