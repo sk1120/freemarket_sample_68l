@@ -24,19 +24,8 @@ class Item < ApplicationRecord
     '着払い(購入者負担)': "2"
   }
 
-  enum shipping_means: {
-    '未定': "1",
-    'らくらくメルカリ便': "2",
-    'ゆうメール': "3",
-    'レターパック': "4",
-    '普通郵便（定形・定形外）': "5",
-    'ゆうメール': "6",
-    'ゆうパック': "7",
-    'クリックポスト': "8",
-    'ゆうパケット': "9"
-  }
-
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :prefecture
+  belongs_to_active_hash :shipping_means
 
 end

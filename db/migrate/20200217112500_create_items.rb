@@ -10,7 +10,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
 
       t.string :condition, null: false,default: "0"
       t.string :postage, null: false,default: "0"
-      t.string :shipping_means
+      t.integer :shipping_means_id
       t.integer :prefecture_id, null: false
       t.integer :buyer_id
       t.string :shipping_date, null: false,default: "0"

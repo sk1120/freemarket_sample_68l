@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(version: 2020_02_21_065450) do
     t.string "name", default: "", null: false
     t.string "condition", default: "0", null: false
     t.string "postage", default: "0", null: false
-    t.string "shipping_means"
+    t.integer "shipping_means_id"
     t.integer "prefecture_id", null: false
     t.integer "buyer_id"
     t.string "shipping_date", default: "0", null: false

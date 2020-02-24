@@ -12,11 +12,14 @@ class ItemsController < ApplicationController
   end
 
   def create
+    binding.pry
     @item = Item.new(item_params)
+    binding.pry
     if @item.save
       redirect_to root_path
     else
-      render :new
+      flash[:alert] = "入力が正しくありません"
+      redirect_to root_path
     end
   end
 
@@ -36,6 +39,6 @@ class ItemsController < ApplicationController
   end
 
   def item_params
-    params.require(:item).permit(:name, :text, :category_id, :brand, :condition, :postage, :region, :shipping_date, :price,:shipping_means,:prefecture_id, item_images_attributes: :image_url).merge(saler_id: current_user.id,buyer_id: current_user.id)
+    params.require(:item).permit(:name, :text, :category_id, :brand, :condition, :postage, :region, :shipping_date, :price,:shipping_means_id,:prefecture_id, item_images_attributes: :image_url).merge(saler_id: current_user.id)
   end
 end

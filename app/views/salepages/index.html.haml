@@ -1,5 +1,6 @@
 .header
   .header__logo
+    = flash[:alert]
     = link_to '#' do
       = image_tag 'logo.png', class: "header__logo--image"
 .main
@@ -78,7 +79,7 @@
             .main__content__delivery__title__sub.shipping_mean_title
               必須
           .main__content__delivery__text5--input.icon-relative.shipping_mean_form
-            = f.select :shipping_means, [['選択してください', "0"],['未定', "1"],['らくらくメルカリ便', "2"],['ゆうメール', "3"],['レターパック', "4"],['普通郵便（定形・定形外）', "5"],['ゆうメール', "6"],['ゆうパック', "7"],['クリックポスト', "8"],['ゆうパケット', "9"]],{}, class: 'main__content__name__text mean'
+            = f.collection_select :shipping_means_id,ShippingMeans.all,:id,:means, {prompt: "選択してください"}, class: 'main__content__name__text'
             = icon('fa_icon' "chevron-down", class: "identification__form-icon")
           .main__content__delivery__area
             .main__content__delivery__area__subname
