@@ -70,7 +70,7 @@
         = link_to "商品編集", "#", class: "item_wrapper__btn__edit"
         = link_to "商品削除", "#", class: "item_wrapper__btn__destroy"
       - else
-        = link_to "商品購入", "#", class: "item_wrapper__btn__buy"
+        = link_to "商品購入", item_purchase_path(params[:id]), class: "item_wrapper__btn__buy"
 
 
 

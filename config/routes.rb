@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   resources :categories , only: [:show,:index]
 
   resources :items, except: :index do
+    get 'purchase'
     collection do
       get 'ancestry_children'
       get 'ancestry_grand_children'

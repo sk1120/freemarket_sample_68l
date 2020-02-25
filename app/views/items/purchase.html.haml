@@ -1,6 +1,6 @@
 .header
   .header__logo
-    = link_to '#' do
+    = link_to root_path do
       = image_tag 'logo.png', class: "header__logo--image"
 .main
   .main__contents
@@ -9,25 +9,26 @@
     .main__contents__item-box
       .main__contents__item-box__item
         .main__contents__item-box__item__image
+          = image_tag @item.item_images.first.image_url.to_s
         .main__contents__item-box__item__detail
           .main__contents__item-box__item__detail__name
-            CHANEL ヴィタミエールグロウ
+            = @item.name
           .main__contents__item-box__item__detail__price
-            ¥630 （税込）送料込み
+            %p ¥#{@item.price} （税込）送料込み
     .main__contents__price-box
       .main__contents__price-box__price
         .main__contents__price-box__price__top
           .main__contents__price-box__price__top__left
             支払い金額
           .main__contents__price-box__price__top__right
-            ¥630
+            ¥#{@item.price}
         .main__contents__price-box__price__bottom
           ポイントを使用（所持ポイント:P0）
       .main__contents__price-box__way
         .main__contents__price-box__way__top
           支払い方法
         .main__contents__price-box__way__bottom
-          = link_to "登録してください", new_credit_card_mainpages_path, class: "main__contents__price-box__way__bottom"
+          = link_to "登録してください", new_credit_card_user_path(current_user), class: "main__contents__price-box__way__bottom"
       .main__contents__price-box__delivery
         .main__contents__price-box__delivery__top
           配送先

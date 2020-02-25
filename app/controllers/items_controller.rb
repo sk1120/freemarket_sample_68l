@@ -36,6 +36,10 @@ class ItemsController < ApplicationController
   def destroy
   end
 
+  def purchase
+    @item = Item.find(params[:item_id])
+  end
+
   def ancestry_children
     parent = Category.find(params[:category_id])
     @category_children = parent.children
