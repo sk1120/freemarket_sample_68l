@@ -1,5 +1,4 @@
 class ItemsController < ApplicationController
-  # before_action :set_item,only: [:edit,:update,:destroy]
   before_action :authenticate_user!
 
   def index
@@ -16,7 +15,6 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     @categories = Category.all.where(ancestry: nil)
-    # binding.pry
     if @item.save
       redirect_to root_path
     else
@@ -56,8 +54,6 @@ class ItemsController < ApplicationController
   end
 
   def item_params
-    # binding.pry
-    params.require(:item).permit(:name,:text , :category_parent_id , :category_child_id , :category_grand_child_id , :brand , :condition , :postage , :shipping_means_id , :prefecture_id , :shipping_date , :price, :saler_id, item_images_attributes: [:image_url,:_destroy,:id])
-    # binding.pry
+    params.require(:item).permit(:name, :text,:category_parent_id,:category_child_id ,:category_grand_child_id, :brand, :condition, :postage, :region, :shipping_date, :price,:shipping_means_id,:prefecture_id, item_images_attributes: [:image_url, :_destroy, :id]).merge(saler_id: current_user.id)
   end
 end
