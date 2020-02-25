@@ -86,27 +86,48 @@ a {
     line-height: 50px;
     display: flex;
     justify-content: space-between;
-  }
+    .header__sub__leftBox__list {
 
-    .productlist {
-      list-style: none;
-      background-color: $white;
-      display: flex;
-      width: 200px;
-      height: 50px;
-    }
+      .header__sub__leftBox__list__categoryMenu {
 
-      .category {
-        background-color: $white;
-        width: 100px;
-        height: 50px;
+        .header__sub__leftBox__list__categoryMenu__secondLevel--list {
+          background-color: $white;
+          .header__sub__leftBox__list__categoryMenu__thirdLevel{
+
+            .header__sub__leftBox__list__categoryMenu__thirdLevel--list{
+              .header__sub__leftBox__list__categoryMenu__fourthLevel{
+                .header__sub__leftBox__list__categoryMenu__fourthLevel--list{
+
+                }
+              }
+            }
+          }
+        }
       }
-
       .brand {
         background-color: $white;
-        width: 100px;
+        width: 50%;
         height: 50px;
+        .dropdown-btn2{
+          text-align: left;
+          .dropdown{
+            // display: none;
+            width: 300px;
+          }
+        }
       }
+    }
+    .delete-button {
+      display: none;
+      position: absolute;
+      top: 3%;
+      left: 85%;
+      opacity: 0.5;
+    }
+    
+    .delete-button:hover {
+        opacity: 0.9;
+    }
 
     .userpage {
       list-style: none;
@@ -120,7 +141,7 @@ a {
         padding-right: 30px;
       }
     }
-
+  }
 
   // 未ログインの時の表記について
     // .userlogin {

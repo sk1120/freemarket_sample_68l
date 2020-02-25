@@ -12,3 +12,9 @@ $(function(){
     $(this).addClass('active');
   })
 })
+
+$(hoge).hover(function() {
+  $(this).children('.delete-button').fadeIn(150);
+}, function() {
+  $(this).children('.delete-button').fadeOut(150);
+});

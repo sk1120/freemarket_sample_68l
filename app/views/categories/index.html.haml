@@ -1,0 +1,19 @@
+.category-index
+  .category-index__gray
+    カテゴリー一覧
+  .category-index__parent-list
+    - @categories.each do |parent|
+      = link_to parent.name
+  .category-index__list-box
+    - @categories.each do |parent|
+      .category-index__list-box__category-name
+        = parent.name
+      .category-index__list-box__inner-box
+        .category-index__list-box__child.name
+          - parent.children.each do |child|
+            %br
+            = child.name
+            .category-index__list-box__inner-box__grandchild-box
+              - child.children.each do |grand_child|
+                = link_to grand_child.name
+

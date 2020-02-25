@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'salepages#index'
+  root 'mainpages#index'
   resources :items
 
   resources :item_images, only: [:index, :create, :destroy]

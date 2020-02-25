@@ -11,13 +11,22 @@
        
 
   .header__lower
-    %ul.productlist
-      %li.category
-        = link_to "#" do
-          カテゴリー
-      %li.brand
-        = link_to "#" do
-          ブランド
+    %ul.header__sub__leftBox__list
+      %li.header__sub__leftBox__list__categoryMenu
+        = link_to "カテゴリー", root_path
+        %ul.header__sub__leftBox__list__categoryMenu__secondLevel
+          - @categories.each do |parent|
+            %li.header__sub__leftBox__list__categoryMenu__secondLevel--list
+              = link_to parent.name, root_path
+              %ul.header__sub__leftBox__list__categoryMenu__thirdLevel
+                - parent.children.each do |child|
+                  %li.header__sub__leftBox__list__categoryMenu__thirdLevel--list
+                    -# = link_to child.name, root_path
+                    %ul.header__sub__leftBox__list__categoryMenu__fourthLevel
+                      - child.children.each do |grandchild|
+                        %li.header__sub__leftBox__list__categoryMenu__fourthLevel--list
+                          -# = link_to grandchild.name, root_path
+
 
     %ul.userpage
       %li.userpage__info
