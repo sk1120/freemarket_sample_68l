@@ -1,19 +1,21 @@
 .itemslist_main {
   list-style: none;
+  background-color: $thingray;
   width: 100vw;
-  height: 1000px;
+  height: 1100px;
   padding-left: 100px;
   padding-right: 100px;
-  background-color: paleturquoise;
 
   &__title {
-    background-color: papayawhip;
+    color: $thickgray;
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 60px;
   }
 
   &__contents {
     width: 100%;
     height: 100%;
-    background-color: lemonchiffon;
     display: flex;
     flex-flow: row wrap; /*flex-direction + flex-wrapの記述が可能*/
     // flex-flow: column wrap;
@@ -23,9 +25,9 @@
     
 
     &__list {
-      background-color: mistyrose;
+      background-color: $white;
       width: 18%;
-      height: 20%;
+      height: 200px;
       margin-right: 10px;
       margin-left: 10px;
       position: relative;
