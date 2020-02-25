@@ -2,7 +2,7 @@
   list-style: none;
   background-color: $thingray;
   width: 100vw;
-  height: 1100px;
+  height: 1200px;
   padding-left: 100px;
   padding-right: 100px;
 
@@ -11,6 +11,8 @@
     font-size: 25px;
     font-weight: bold;
     padding-left: 60px;
+    padding-top: 10px;
+    padding-bottom: 5px;
   }
 
   &__contents {
