@@ -15,12 +15,13 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-    binding.pry
+    @categories = Category.all.where(ancestry: nil)
+    # binding.pry
     if @item.save
       redirect_to root_path
     else
       flash[:alert] = "入力が正しくありません"
-      redirect_to root_path
+      render :new
     end
   end
 
@@ -56,7 +57,7 @@ class ItemsController < ApplicationController
 
   def item_params
     # binding.pry
-    params.require(:item).permit(:name,:text , :category_parent_id , :category_child_id , :category_grand_child_id , :brand , :condition_id , :postage_id , :shipping_means_id , :prefecture_id , :shipping_date_id , :price, item_images_attributes: [:image_url,:_destroy,:id]).merge(saler_id: current_user.id)
-    binding.pry
+    params.require(:item).permit(:name,:text , :category_parent_id , :category_child_id , :category_grand_child_id , :brand , :condition , :postage , :shipping_means_id , :prefecture_id , :shipping_date , :price, :saler_id, item_images_attributes: [:image_url,:_destroy,:id])
+    # binding.pry
   end
 end

@@ -118,6 +118,7 @@
               .main__content__price__box__top__right__a
               ￥
               = f.number_field :price,placeholder: "例）300",class: "main__content__price__box__top__right",id: "price_calc"
+              = f.hidden_field :saler_id,value: "#{current_user.id}"
           .main__content__price__box__commission
             販売手数料（10%)
             .main__content__price__box__commission__bar
