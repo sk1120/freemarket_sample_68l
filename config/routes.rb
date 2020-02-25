@@ -27,5 +27,4 @@ Rails.application.routes.draw do
       get 'ancestry_grand_children'
     end
   end
-
 end

@@ -115,6 +115,34 @@
         }
       }
     }
+    &__btn {
+      font-size: 24px;
+      line-height: 60px;
+      margin-top: 16px;
+      text-align: center;
+      text-decoration: none;
+      display: flex;
+      justify-content: space-between;
+      &__edit {
+        background: greenyellow;
+        display: block;
+        margin-right: 40px;
+        border-radius: 5px;
+        width: 150px;
+      }
+      &__destroy {
+        background: greenyellow;
+        display: block;
+        border-radius: 5px;
+        width: 150px;
+      }
+      &__buy {
+        background: greenyellow;
+        display: block;
+        border-radius: 5px;
+        width: 150px;
+      }
+    }
   }
   .item_comment_wrapper{
     width: 100%;
