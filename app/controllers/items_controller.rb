@@ -23,6 +23,7 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    @categories = Category.all.where(ancestry: nil)
   end
 
   def update
