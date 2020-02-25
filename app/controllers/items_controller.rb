@@ -1,11 +1,9 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:edit,:update,:destroy]
+  before_action :set_item, only: [:show, :edit,:update,:destroy]
   before_action :authenticate_user!
 
   def show
     @items = Item.includes(:item_images).order('created_at DESC')
-    @item = Item.new
-    @item = Item.find(params[:id])
   end
 
   def new
