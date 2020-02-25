@@ -1,4 +1,4 @@
-$(function(){
+$(document).on('turbolinks:load',function(){
   $('.contents__content__change_2--select').on('click',function(e){
     e.preventDefault();
     var doms = $(this).nextAll('.contents__content__change_2--select');
