@@ -1,13 +1,9 @@
-* {
-  box-sizing: border-box;
-}
-
 .itemslist_main {
   list-style: none;
   width: 100vw;
   height: 800px;
   padding-left: 100px;
-  padding-right: 100px;
+  padding-right: 10px;
   background-color: paleturquoise;
 
   &__title {
@@ -19,12 +15,19 @@
     height: 100%;
     background-color: lemonchiffon;
     display: flex;
-    justify-content: space-evenly;
+    flex-flow: row wrap; /*flex-direction + flex-wrapの記述が可能*/
+    // flex-flow: column wrap;
+    // justify-content: space-evenly;
+    padding-left: 5%;
+    padding-right: 5%;
+    
 
     &__list {
-      background-color: plum;
-      width: 15%;
-      height: 15%;
+      background-color: mistyrose;
+      width: 18%;
+      height: 20%;
+      margin-right: 10px;
+      margin-left: 10px;
     }
 
     
