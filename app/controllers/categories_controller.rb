@@ -5,14 +5,8 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    # @items = Category.find(params[:id])
+    @category = Category.find(params[:id])
+    @items = Item.find_by(category_child_id:@category.id)
   end
-
-
-  private
-
-  # def category_params
-  #   params.require(:category).permit(:content, :image).merge(category_id: current_category.id)
-  # end
 
 end

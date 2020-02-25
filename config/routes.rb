@@ -24,8 +24,7 @@ Rails.application.routes.draw do
       get 'new_credit_card'
     end
   end
-  resources :items,only: :index
+  resources :items,only: [:index, :show]
   resources :categories, only: [:index, :show]
-
 
 end
