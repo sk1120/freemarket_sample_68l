@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'salepages#index'
+  root 'items#show'
   resources :items
 
   resources :item_images, only: [:index, :create, :destroy]
@@ -16,7 +16,7 @@ Rails.application.routes.draw do
       get 'ancestry_grand_children'
     end
   end
-  root "mainpages#index"
+  # root "salepages#index"
 
   resources :mainpages do
     collection do
@@ -24,5 +24,5 @@ Rails.application.routes.draw do
       get 'new_credit_card'
     end
   end
-  resources :items,only: :index
+  resources :items, only: [:show]
 end

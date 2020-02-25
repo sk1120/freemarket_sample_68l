@@ -2,9 +2,10 @@
 
 .show_item
   .item_wrapper
-    %h1.item_title Ruby on Rails
+    %h1.item_title 
+      = @item.name
     .image_top_wrapper
-      =image_tag  "https://cdn.pixabay.com/photo/2020/02/11/21/09/bio-4840960_1280.jpg",{class: "image_top"}
+      = image_tag @item.item_images.first.image_url.to_s, class: "image_top"
       %ul.bxslider
         %li.image_child_wrapper
           =image_tag "https://cdn.pixabay.com/photo/2020/01/26/22/55/road-4796107_1280.jpg",{class: "image_child"}
@@ -21,19 +22,23 @@
         %li.image_child_wrapper
           =image_tag "https://cdn.pixabay.com/photo/2017/08/07/21/40/people-2608145_1280.jpg",{class: "image_child"}
 
-    %h1.item_price ¥10,000
+    %h1.item_price 
+      = @item.price
     %p (税込)送料込み
-    %h1.item_title_bottom Ruby on Rails
+    %h1.item_title_bottom 
+      = @item.name
     .item_table_wrapper
       %table.item_table
         %tr
           %th 出品者
           %td 
-            %p 山本俊介
+            %p 
+              = @item.saler.family_name
+              = @item.saler.first_name
         %tr
           %th カテゴリー
           %td 
-            =link_to "言語","#"
+            =link_to @item.category.name, "#"
         %tr
           %th ブランド
           %td 
