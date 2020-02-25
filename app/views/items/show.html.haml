@@ -2,7 +2,7 @@
 
 .show_item
   .item_wrapper
-    %h1.item_title 
+    %p.item_title 
       = @item.name
     .image_top_wrapper
       = image_tag @item.item_images.first.image_url.to_s, class: "image_top"
@@ -22,10 +22,10 @@
           -# %li.image_child_wrapper
           -#   =image_tag "https://cdn.pixabay.com/photo/2017/08/07/21/40/people-2608145_1280.jpg",{class: "image_child"}
 
-    %h1.item_price 
+    %p.item_price 
       = @item.price
     %p (税込)送料込み
-    %h1.item_title_bottom 
+    %p.item_title_bottom 
       = @item.name
     .item_table_wrapper
       %table.item_table
@@ -38,7 +38,7 @@
         %tr
           %th カテゴリー
           %td 
-            =link_to @item.category.name, "#"
+            =link_to @item.category_grand_child.name, "#"
         %tr
           %th ブランド
           %td 
