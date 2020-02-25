@@ -1,9 +1,3 @@
-.header{
-  height: 100px;
-  width: 100vw;
-  background-color: blue;
-}
-
 .my_page{
   .main{
     width: 100vw;
@@ -12,7 +6,6 @@
     padding: 40px 0;
     .contents{
       width: 1020px;
-      margin: auto;
       display: flex;
       justify-content: space-between;
       &__list{
@@ -287,18 +280,6 @@
       }
     }
   }
-}
-
-.app__footer{
-  height: 500px;
-  width: 100vw;
-  background-color: green;
-}
-
-.footer{
-  height: 500px;
-  width: 100vw;
-  background-color: black;
 }
 
 .active{

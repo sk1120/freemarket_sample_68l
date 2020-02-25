@@ -422,9 +422,10 @@
   
 
 .SellBtn {
+  position: fixed;
   top: calc(100vh - 140px);
   left: calc(100vw - 180px);
-
+  z-index: 100000;
   &__text {
     position: fixed;
     color: $white;
