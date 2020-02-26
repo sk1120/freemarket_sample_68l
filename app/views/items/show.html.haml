@@ -9,7 +9,7 @@
       %ul.bxslider
         - @item.item_images.each do |image|
           %li.image_child_wrapper
-            = image_tag image.image_url.to_s
+            = image_tag image.image_url.to_s,{class: "image_child"}
           -# %li.image_child_wrapper
           -# %li.image_child_wrapper
           -#   =image_tag "https://cdn.pixabay.com/photo/2019/06/22/18/26/woman-4292185_1280.jpg",{class: "image_child"}
