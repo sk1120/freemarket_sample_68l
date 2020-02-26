@@ -47,7 +47,7 @@ class ItemsController < ApplicationController
 
   def purchase
     @item = Item.find(params[:item_id])
-    card = Card.where(user_id: current_user.id).first
+    card = Card.find_by(user_id: current_user.id)
     if card.blank?
       redirect_to controller: "card", action: "new"
     else
@@ -58,7 +58,7 @@ class ItemsController < ApplicationController
   end
 
   def pay
-    card = Card.where(user_id: current_user.id).first
+    card = Card.find_by(user_id: current_user.id)
     item = Item.find(params[:item_id])
     item.update(buyer_id: current_user.id)
     Payjp.api_key = Rails.application.credentials[:payjp][:PAYJP_PRIVATE_KEY]
