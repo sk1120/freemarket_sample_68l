@@ -2,10 +2,10 @@
   = render "shared/header"
 
 .itemslist_main
-  -@items.each do |item|
-    .itemslist_main__title
-      商品一覧
-    %ul.itemslist_main__contents
+  .itemslist_main__title
+    商品一覧
+  %ul.itemslist_main__contents
+    -@items.each do |item|
       %li.itemslist_main__contents__list
         = link_to item_path(item) do
           = image_tag item_path, class: "itemslist_main__contents__list__img"
