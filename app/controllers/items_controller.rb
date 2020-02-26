@@ -26,6 +26,7 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    @categories = Category.where(ancestry: nil)
   end
 
   def update
@@ -37,6 +38,10 @@ class ItemsController < ApplicationController
   end
 
   def destroy
+    if @item.destroy
+      redirect_to root_path
+    else
+      render :show
   end
 
   def purchase
