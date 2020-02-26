@@ -78,7 +78,7 @@
         %p 不適切な商品の通報
     .item_wrapper__btn
       - if @item.saler_id == current_user.id
-        = link_to "商品編集", "#", class: "item_wrapper__btn__edit"
+        = link_to "商品編集", edit_item_path, class: "item_wrapper__btn__edit"
         = link_to "商品削除", "#", class: "item_wrapper__btn__destroy"
       - else
         = link_to "商品購入", "#", class: "item_wrapper__btn__buy"
