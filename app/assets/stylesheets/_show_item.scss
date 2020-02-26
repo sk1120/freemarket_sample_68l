@@ -52,10 +52,13 @@
         }
       }
     }
-    .item_price{
-      font-size: 40px;
-      font-weight: bold;
-      margin-top: 170px;
+    .item_box {
+      display: flex;
+      .item_price{
+        font-size: 40px;
+        font-weight: bold;
+        margin-top: 170px;
+      }
     }
     .item_title_bottom{
       margin:20px auto 20px 0 ;
