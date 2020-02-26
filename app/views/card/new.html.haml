@@ -1,21 +1,19 @@
-.header
+= render "shared/header"
 
 .my_page
   .main
     .contents
       = render "users/left_menu"
       .contents__content
-
         .new_credit_title
           %h1 クレジットカード情報入力
         .new_credit_form_wrapper
           .new_credit_form_wrapper__contents
-            = form_tag(new_item_path, method: :post,id: "charge-form",name: "inputForm") do
+            = form_tag(pay_card_index_path, method: :post,id: "charge-form",name: "inputForm") do
               .credit_form_title
                 %p.title カード番号
                 %p.necesary 必須
               = text_field_tag "number", "", class: "credit_form_text number number", placeholder: "半角数字のみ" ,maxlength: "16", type: "text", id: "card_number"
-              -# %input{type: "text",placeholder: "半角数字のみ",class: "credit_form_text number"}
               .credit_form_cards
                 =image_tag "material/credits/credit-card_0.png"
                 =image_tag "material/credits/credit-card_1.png"
@@ -60,10 +58,8 @@
                 %p.necesary 必須
               .credit_form_card_num
                 = text_field_tag "cvc", "", class: "cvc credit_form_text", placeholder: "カード背面3~4桁の番号", maxlength: "4", id: "cvc",pettern: "/\A[0-9]+\z/"
-                -# %input{type: "text",placeholder: "カード背面4桁もしくは3桁の番号",maxlength: "4",pettern: "/\A[0-9]+\z/",class: "credit_form_text"}
-              -# %input{type: "submit",value: "追加する",class: "credit_form_submit"}
+              #card_token
               = submit_tag "追加する", id: "token_submit",class: "credit_form_submit"
-.app__footer
-
-
-.footer
+= render "shared/banner"
+= render "shared/footer"
+= render "shared/SellBtn"
