@@ -28,7 +28,8 @@ class CardController < ApplicationController
   end
   
   def delete
-    card = Card.where(user_id: current_user.id).first
+    # card = Card.where(user_id: current_user.id).first
+    card = Card.find_by(user_id: current_user.id)
     if card.blank?
     else
       Payjp.api_key = Rails.application.credentials[:payjp][:PAYJP_PRIVATE_KEY]
