@@ -21,9 +21,11 @@
           -#   =image_tag "https://cdn.pixabay.com/photo/2020/01/20/05/54/one-4779562_1280.jpg",{class: "image_child"}
           -# %li.image_child_wrapper
           -#   =image_tag "https://cdn.pixabay.com/photo/2017/08/07/21/40/people-2608145_1280.jpg",{class: "image_child"}
-
-    %p.item_price 
-      = @item.price
+    .item_box
+      %p.item_price 
+        ¥
+      %p.item_price 
+        = @item.price
     %p (税込)送料込み
     %p.item_title_bottom 
       = @item.name
@@ -79,7 +81,7 @@
     .item_wrapper__btn
       - if @item.saler_id == current_user.id
         = link_to "商品編集", edit_item_path, class: "item_wrapper__btn__edit"
-        = link_to "商品削除", "#", class: "item_wrapper__btn__destroy"
+        = link_to "商品削除", item_path(@item), class: "item_wrapper__btn__destroy", method: :delete
       - else
         = link_to "商品購入", "#", class: "item_wrapper__btn__buy"
 
