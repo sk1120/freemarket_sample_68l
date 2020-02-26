@@ -10,10 +10,6 @@
         - @item.item_images.each do |image|
           %li.image_child_wrapper
             = image_tag image.image_url.to_s,{class: "image_child"}
-
-    %p.item_price 
-      = @item.price
-            = image_tag image.image_url.to_s
     .item_box
       %p.item_price 
         ¥
