@@ -82,5 +82,5 @@ gem 'haml-rails'
 gem 'ancestry'
 gem 'active_hash'
 gem 'turbolinks', '~> 5'
-
+gem 'payjp'
 gem 'bxslider-rails'
