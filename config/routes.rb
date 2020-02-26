@@ -28,4 +28,12 @@ Rails.application.routes.draw do
       get 'ancestry_grand_children'
     end
   end
+
+  resources :card ,only: [:show,:new] do
+    collection do
+      post 'delete',to: "card#delete"
+      post 'pay',to: "card#pay"
+      post 'show',to: "card#show"
+    end
+  end
 end
