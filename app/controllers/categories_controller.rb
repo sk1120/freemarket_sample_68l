@@ -7,6 +7,5 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
     @items = Item.where(category_parent_id:@category.id)
-    # binding.pry
   end
 end
