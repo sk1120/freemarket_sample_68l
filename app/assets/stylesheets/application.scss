@@ -1,11 +1,17 @@
-@import "reset";
+@import 'reset';
+@import 'modules/colors';
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 @import 'bxslider';
-@import 'modules/colors';
 @import "mypage";
-@import "mainpages";
+@import "modules/header";
+@import "modules/mainpage";
+@import "modules/footer";
+@import "modules/banner";
 @import 'users';
 @import 'users2';
 @import 'users3';
+@import 'salepages';
 @import 'show_item';
+@import 'buys';
+

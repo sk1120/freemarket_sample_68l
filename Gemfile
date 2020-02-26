@@ -71,6 +71,7 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
 gem 'pry-rails'
 gem 'devise'
 gem 'jquery-rails'
@@ -80,3 +81,8 @@ gem 'mini_magick'
 gem 'haml-rails'
 gem 'bxslider-rails'
 gem 'fog-aws'
+gem 'ancestry'
+gem 'active_hash'
+gem 'turbolinks', '~> 5'
+gem 'payjp'
+gem 'bxslider-rails'
