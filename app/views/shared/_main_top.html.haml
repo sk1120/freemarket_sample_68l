@@ -117,44 +117,45 @@
 
       .pickupcategory__items
         %ul.pickupcategory__top
-          %li.pickupcategory__top__list
-            = link_to "#" do
-              = image_tag 'material/pict/omake_zasshi_otona.png', class: "pickupcategory__top__list__img"
-              .pickupcategory__top__list__data
-                .pickupcategory__top__list__data__name
-                  付録つきファッション誌
-                %ul.pickupcategory__top__list__data__details
-                  %li.pickupcategory__top__list__data__details__price
-                    ¥3000
-                  %li.pickupcategory__top__list__data__details__likes
-                    ★4
-                %p (税込)
+          - @items.each do |item|
+            %li.pickupcategory__top__list
+              = link_to item_path(item) do
+                = image_tag item.item_images[0].image_url.to_s, class: "pickupcategory__top__list__img"
+                .pickupcategory__top__list__data
+                  .pickupcategory__top__list__data__name
+                    = item.name
+                  %ul.pickupcategory__top__list__data__details
+                    %li.pickupcategory__top__list__data__details__price
+                      = item.price
+                    %li.pickupcategory__top__list__data__details__likes
+                      ★4
+                  %p (税込)
 
-          %li.pickupcategory__top__list
-            = link_to "#" do
-              = image_tag 'material/pict/hair_barretta.png', class: "pickupcategory__top__list__img"
-              .pickupcategory__top__list__data
-                .pickupcategory__top__list__data__name
-                  ヘアアクセサリー
-                %ul.pickupcategory__top__list__data__details
-                  %li.pickupcategory__top__list__data__details__price
-                    ¥2000
-                  %li.pickupcategory__top__list__data__details__likes
-                    ★4.5
-                %p (税込)
+    -#       %li.pickupcategory__top__list
+    -#         = link_to "#" do
+    -#           = image_tag 'material/pict/hair_barretta.png', class: "pickupcategory__top__list__img"
+    -#           .pickupcategory__top__list__data
+    -#             .pickupcategory__top__list__data__name
+    -#               ヘアアクセサリー
+    -#             %ul.pickupcategory__top__list__data__details
+    -#               %li.pickupcategory__top__list__data__details__price
+    -#                 ¥2000
+    -#               %li.pickupcategory__top__list__data__details__likes
+    -#                 ★4.5
+    -#             %p (税込)
 
-          %li.pickupcategory__top__list
-            = link_to "#" do
-              = image_tag 'material/pict/fashion_shiborizome.png', class: "pickupcategory__top__list__img"
-              .pickupcategory__top__list__data
-                .pickupcategory__top__list__data__name
-                  Tシャツ
-                %ul.pickupcategory__top__list__data__details
-                  %li.pickupcategory__top__list__data__details__price
-                    ¥1000
-                  %li.pickupcategory__top__list__data__details__likes
-                    ★3
-                %p (税込)
+    -#       %li.pickupcategory__top__list
+    -#         = link_to "#" do
+    -#           = image_tag 'material/pict/fashion_shiborizome.png', class: "pickupcategory__top__list__img"
+    -#           .pickupcategory__top__list__data
+    -#             .pickupcategory__top__list__data__name
+    -#               Tシャツ
+    -#             %ul.pickupcategory__top__list__data__details
+    -#               %li.pickupcategory__top__list__data__details__price
+    -#                 ¥1000
+    -#               %li.pickupcategory__top__list__data__details__likes
+    -#                 ★3
+    -#             %p (税込)
 
     .pickupbrand
       .pickupbrand__title
