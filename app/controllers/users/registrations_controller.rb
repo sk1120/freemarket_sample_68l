@@ -32,6 +32,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @user.deliver_addresses.build(@address.attributes)
     if @user.save
       sign_in(:user, @user)
+      redirect_to root_path
+      flash[:notice] = "登録完了しました"
     else 
       render :new_address
     end

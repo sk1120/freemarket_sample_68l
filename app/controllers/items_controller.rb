@@ -18,6 +18,7 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     @categories = Category.all.where(ancestry: nil)
     if @item.save
+      flash[:notice] = "出品完了しました"
       redirect_to item_path(@item)
     else
       flash[:alert] = "入力が正しくありません"
