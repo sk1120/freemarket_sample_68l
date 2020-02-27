@@ -7,25 +7,131 @@
       %input{ type: "text", class: "searchform__text", placeholder: "キーワードから探す" }
     .submit
       %button{ type: "submit", src: "images/icon-search 1.png", class: "submitbtn__btn" } 
-        = image_tag "material/icon/icon-search 1.png", class: "submitbtn__icon"
-       
+        = image_tag "material/icon/icon-search 1.png", class: "submitbtn__icon"    
 
   .header__lower
     %ul.header__sub__leftBox__list
       %li.header__sub__leftBox__list__categoryMenu
-        = link_to "カテゴリー", root_path
+        = link_to "カテゴリーから探す", root_path
+        -# %a{:href => "#"} カテゴリーから探す
+        -# %ul
+        -# - Category.where(ancestry: nil).each do |category|
+        -#   %li
+        -#     %a{href: "#"} #{category.name}
+        %ul.header__sub__leftBox__list1
+          %li
+            %a{:href => "", value: "1", class: "category-parent"} レディース
+          %li
+            %a{:href => "",value: "200", class: "category-parent"} メンズ
+          %li
+            %a{:href => "",value: "346", class: "category-parent"} ベビー・キッズ
+          %li
+            %a{:href => "",value: "481", class: "category-parent"} インテリア・住まい・小物
+          %li
+            %a{:href => "",value: "625", class: "category-parent"} 本・音楽・ゲーム
+          %li
+            %a{:href => "",value: "685", class: "category-parent"} おもちゃ・ホビー・グッズ
+          %li
+            %a{:href => "",value: "798", class: "category-parent"} コスメ・香水・美容
+          %li
+            %a{:href => "",value: "898", class: "category-parent"} 家電・スマホ・カメラ
+          %li
+            %a{:href => "",value: "984", class: "category-parent"} スポーツ・レジャー
+          %li
+            %a{:href => "",value: "1093", class: "category-parent"} ハンドメイド
+          %li
+            %a{:href => "",value: "1147", class: "category-parent"} チケット
+          %li
+            %a{:href => "",value: "1207", class: "category-parent"} 自転車・オートバイ
+          %li
+            %a{:href => "",value: "1270", class: "category-parent"} その他
+
+        %ul.header__sub__leftBox__list2
+          %li
+            %a{:href => "", value: "2", class: "category-child"} トップス
+          %li
+            %a{:href => "",value: "21", class: "category-child"} ジャケット/アウター
+          %li
+            %a{:href => "",value: "43", class: "category-child"} パンツ
+          %li
+            %a{:href => "",value: "56", class: "category-child"} スカート
+          %li
+            %a{:href => "",value: "62", class: "category-child"} ワンピース
+          %li
+            %a{:href => "",value: "67", class: "category-child"} 靴
+          %li
+            %a{:href => "",value: "78", class: "category-child"} ルームウェア/パジャマ
+          %li
+            %a{:href => "",value: "81", class: "category-child"} レッグウェア
+          %li
+            %a{:href => "",value: "87", class: "category-child"} 帽子
+          %li
+            %a{:href => "",value: "95", class: "category-child"} バッグ
+          %li
+            %a{:href => "",value: "114", class: "category-child"} アクセサリー
+          %li
+            %a{:href => "",value: "126", class: "category-child"} ヘアアクセサリー
+          %li
+            %a{:href => "",value: "131", class: "category-child"} 小物
+          %li
+            %a{:href => "",value: "155", class: "category-child"} 時計
+          %li
+            %a{:href => "",value: "162", class: "category-child"} ウィッグ/エクステ
+          %li
+            %a{:href => "",value: "169", class: "category-child"} 浴衣/水着
+          %li
+            %a{:href => "",value: "178", class: "category-child"} スーツ/フォーマル/ドレス
+          %li
+            %a{:href => "",value: "186", class: "category-child"} マタニティ
+
+        %ul.header__sub__leftBox__list3
+          %li
+            %a{:href => "", value: "3", class: "category-grandchild"} Tシャツ/カットソー(半袖/袖なし)
+          %li
+            %a{:href => "",value: "4", class: "category-grandchild"} Tシャツ/カットソー(七分/長袖)
+          %li
+            %a{:href => "",value: "5", class: "category-grandchild"} シャツ/ブラウス(半袖/袖なし)
+          %li
+            %a{:href => "",value: "6", class: "category-grandchild"} シャツ/ブラウス(七分/長袖)
+          %li
+            %a{:href => "",value: "7", class: "category-grandchild"} ポロシャツ
+          %li
+            %a{:href => "",value: "8", class: "category-grandchild"} キャミソール
+          %li
+            %a{:href => "",value: "9", class: "category-grandchild"} タンクトップ
+          %li
+            %a{:href => "",value: "10", class: "category-grandchild"} ホルターネック
+          %li
+            %a{:href => "",value: "11", class: "category-grandchild"} ニット/セーター
+          %li
+            %a{:href => "",value: "12", class: "category-grandchild"} チュニック
+          %li
+            %a{:href => "",value: "13", class: "category-grandchild"} カーディガン/ボレロ
+          %li
+            %a{:href => "",value: "14", class: "category-grandchild"} アンサンブル
+          %li
+            %a{:href => "",value: "15", class: "category-grandchild"} ベスト/ジレ
+          %li
+            %a{:href => "",value: "16", class: "category-grandchild"} パーカー
+          %li
+            %a{:href => "",value: "17", class: "category-grandchild"} トレーナー/スウェット
+          %li
+            %a{:href => "",value: "18", class: "category-grandchild"} ベアトップ/チューブトップ
+          %li
+            %a{:href => "",value: "19", class: "category-grandchild"} ジャージ
+
         %ul.header__sub__leftBox__list__categoryMenu__secondLevel
           - @categories.each do |parent|
             %li.header__sub__leftBox__list__categoryMenu__secondLevel--list
               = link_to parent.name, root_path
-              %ul.header__sub__leftBox__list__categoryMenu__thirdLevel
-                - parent.children.each do |child|
-                  %li.header__sub__leftBox__list__categoryMenu__thirdLevel--list
-                    -# = link_to child.name, root_path
-                    %ul.header__sub__leftBox__list__categoryMenu__fourthLevel
-                      - child.children.each do |grandchild|
-                        %li.header__sub__leftBox__list__categoryMenu__fourthLevel--list
-                          -# = link_to grandchild.name, root_path
+              -# %ul.header__sub__leftBox__list__categoryMenu__thirdLevel
+              -#   - parent.children.each do |child|
+              -#     %li.header__sub__leftBox__list__categoryMenu__thirdLevel--list
+              -#       = link_to child.name, root_path
+              -#       %ul.header__sub__leftBox__list__categoryMenu__thirdLevel--list
+              -#         - child.children.each do |grandchild|
+              -#           %li.header__sub__leftBox__list__categoryMenu__fourthLevel--list
+              -#             = link_to grandchild.name, root_path
 
 
     %ul.userpage
