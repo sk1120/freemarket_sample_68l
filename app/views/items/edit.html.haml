@@ -1,0 +1,135 @@
+.header
+  .header__logo
+    = flash[:alert]
+    = link_to root_path do
+      = image_tag 'logo.png', class: "header__logo--image"
+.main
+  .main__content
+    = form_with model: @item,local: true do |f|
+      .main__content__image
+        .main__content__image__title
+          .main__content__image__title__name
+            出品画像
+          .main__content__image__title__sub
+            必須
+        .main__content__image__text
+          最大10枚までアップロードできます。下記部分をクリックしてファイルをアップロード。
+        #image-box
+          #previews
+            - if @item.persisted?
+              - @item.item_images.each_with_index do |item_image, i|
+                -# .image_preview
+                = image_tag item_image.image_url.to_s, data: { index: i }, width: "100", height: '100'
+          = f.fields_for :item_images,@item.item_images do |i|
+            .js-file_group{"data-index" => "#{i.index}"}
+              = i.file_field :image_url, class: 'js-file'
+              %br/
+              %span.js-remove 削除
+            - if @item.persisted?
+              = i.check_box :_destroy, data:{ index: i.index }, class: 'hidden-destroy'
+          - if @item.persisted?
+            .js-file_group{"data-index" => "#{@item.item_images.count}"}
+              = file_field_tag :image_url, name: "item[item_images_attributes][#{@item.item_images.count}][image_url]", class: 'js-file'
+              .js-remove 削除
+      .main__content__name
+        .main__content__name__title
+          .main__content__name__title__subname
+            商品名
+          .main__content__name__title__sub
+            必須
+        = f.text_field :name, autofocus: true, placeholder: '商品名（必須40文字まで）', class: "main__content__name__text"
+        .main__content__name__description
+          .main__content__name__description__subname
+            商品の説明
+          .main__content__name__description__sub
+            必須
+        = f.text_field :text, autofocus: true, placeholder: '商品の説明（必須1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。', class: "main__content__name__text2"
+      .main__content__show
+        .main__content__show__item
+          商品の詳細
+        .main__content__show__title
+          .main__content__show__title__subname
+            カテゴリー
+          .main__content__show__title__sub
+            必須
+        .main__content__show__text3--input.icon-relative.category_area
+          = f.collection_select :category_parent_id, @categories, :id, :name, {prompt: "選択してください"}, class: "main__content__name__text category_parent"
+          = icon('fa_icon' "chevron-down", class: "identification__form-icon")
+        .main__content__show__title
+          .main__content__show__title__subname
+            ブランド
+          .main__content__show__title__subgray
+            任意
+        .main__content__show__text3--input.icon-relative
+          = f.text_field :brand, autofocus: true, placeholder: '  例）シャネル', class: "main__content__name__text"
+        .main__content__show__state
+          .main__content__show__state__subname
+            商品の状態
+          .main__content__show__state__sub
+            必須
+        .main__content__show__text4--input.icon-relative
+          = f.select :condition, [['選択してください', "0"],['新品、未使用', "1"],['未使用に近い', "2"],['目立った傷や汚れなし', "3"],['やや傷や汚れあり', "4"],['傷や汚れあり', "5"],['全体的に状態が悪い', "6"]],{}, class: 'main__content__name__text'
+          = icon('fa_icon' "chevron-down", class: "identification__form-icon")
+      .main__content__delivery
+        .main__content__delivery__item
+          配送について
+        .main__content__delivery__title
+          .main__content__delivery__title__subname
+            配送料の負担
+          .main__content__delivery__title__sub
+            必須
+        .main__content__delivery__text5--input.icon-relative
+          = f.select :postage, [['選択してください', "0"],['送料込み(出品者負担)', "1"],['着払い(購入者負担)', "2"]],{}, class: 'main__content__name__text postage_form'
+          = icon('fa_icon' "chevron-down", class: "identification__form-icon")
+        .main__content__delivery__title  
+          .main__content__delivery__title__subname.shipping_mean_title
+            発送方法
+          .main__content__delivery__title__sub.shipping_mean_title
+            必須
+        .main__content__delivery__text5--input.icon-relative.shipping_mean_form
+          = f.collection_select :shipping_means_id,ShippingMeans.all,:id,:means, {prompt: "選択してください"}, class: 'main__content__name__text'
+          = icon('fa_icon' "chevron-down", class: "identification__form-icon")
+        .main__content__delivery__area
+          .main__content__delivery__area__subname
+            発送元の地域
+          .main__content__delivery__area__sub
+            必須
+        .main__content__delivery__text6--input.icon-relative
+          = f.collection_select :prefecture_id, Prefecture.all, :id, :name, {prompt: "選択してください"}, class: 'main__content__name__text'
+          = icon('fa_icon' "chevron-down", class: "identification__form-icon")
+        .main__content__delivery__day
+          .main__content__delivery__day__subname
+            発送までの日数
+          .main__content__delivery__day__sub
+            必須
+        .main__content__delivery__text7--input.icon-relative
+          = f.select :shipping_date, [['選択してください', "0"],['1~2日で発送', "1"],['2~3日で発送', "2"],['4~7日で発送', "3"]], {}, class: 'main__content__name__text'
+          = icon('fa_icon' "chevron-down", class: "identification__form-icon")
+      .main__content__price
+        .main__content__price__item
+          販売価格（300〜9,999,999）
+        .main__content__price__box
+          .main__content__price__box__top
+            .main__content__price__box__top__left
+              .main__content__price__box__top__left__a
+                販売価格
+              .main__content__price__box__top__left__b
+                必須
+            .main__content__price__box__top__right
+              .main__content__price__box__top__right__a
+              ￥
+              = f.number_field :price,placeholder: "例）300",class: "main__content__price__box__top__right",id: "price_calc"
+              = f.hidden_field :saler_id,value: "#{current_user.id}"
+          .main__content__price__box__commission
+            販売手数料（10%)
+            .main__content__price__box__commission__bar
+          .main__content__price__box__profit
+            販売利益
+            .main__content__price__box__profit__bar_2
+      .main__content__bottom
+        .main__content__bottom__text
+          %p 禁止されている出品、行為を必ずご確認ください。またブランド品でシリアルナンバー等がある場合はご記載ください。偽ブランドの販売は犯罪であり処罰される可能性があります。
+          %p また、出品をもちまして加盟店規約に同意したことになります。
+        = f.submit "出品する",class: "main__content__bottom__send"
+        .main__content__bottom__return
+          もどる

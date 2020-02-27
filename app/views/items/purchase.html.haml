@@ -1,0 +1,36 @@
+.header
+  .header__logo
+    = link_to root_path do
+      = image_tag 'logo.png', class: "header__logo--image"
+.main
+  .main__contents
+    .main__contents__title
+      購入内容の確認
+    .main__contents__item-box
+      .main__contents__item-box__item
+        .main__contents__item-box__item__image
+          = image_tag @item.item_images.first.image_url.to_s
+        .main__contents__item-box__item__detail
+          .main__contents__item-box__item__detail__name
+            = @item.name
+          .main__contents__item-box__item__detail__price
+            %p ¥#{@item.price} （税込）送料込み
+    .main__contents__price-box
+      .main__contents__price-box__price
+        .main__contents__price-box__price__top
+          .main__contents__price-box__price__top__left
+            支払い金額
+          .main__contents__price-box__price__top__right
+            ¥ #{@item.price}
+      .main__contents__price-box__way
+        .main__contents__price-box__way__top
+          %h1.title 支払い方法
+          .card
+            .card--num
+              = "**** **** **** " + @default_card_information.last4
+            .card--expire
+              - exp_month = @default_card_information.exp_month.to_s
+              - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
+              = exp_month + " / " + exp_year
+      = form_tag(action: :pay, method: :post) do
+        %button.main__contents__price-box__buy 購入する

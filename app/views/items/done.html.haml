@@ -1,0 +1,10 @@
+= render "shared/header"
+
+.main
+  .bought
+    %h1.bought--message 購入完了しました
+    =link_to "買い物を続ける",root_path,class: "bought--link"
+
+= render "shared/banner"
+= render "shared/footer"
+= render "shared/SellBtn"
