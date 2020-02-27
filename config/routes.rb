@@ -27,7 +27,5 @@ Rails.application.routes.draw do
       get 'ancestry_grand_children'
     end
   end
-  resources :items,only: [:index, :show]
-  resources :categories, only: [:index, :show]
 
 end
