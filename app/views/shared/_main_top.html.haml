@@ -112,12 +112,12 @@
         ピックアップカテゴリー
 
       .pickupcategory__new
-        = link_to category_path(@category) do
+        = link_to "#" do
           新規投稿商品
 
       .pickupcategory__items
         %ul.pickupcategory__top
-          - @items.each do |item|
+          - @itemsnew.each do |item|
             %li.pickupcategory__top__list
               = link_to item_path(item) do
                 = image_tag item.item_images[0].image_url.to_s, class: "pickupcategory__top__list__img"
