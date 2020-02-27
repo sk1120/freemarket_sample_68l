@@ -113,7 +113,6 @@ a {
             left: 200px;
             top: 0;
             .header__sub__leftBox__list__categoryMenu__thirdLevel--list{
-            
               .header__sub__leftBox__list__categoryMenu__fourthLevel{
 
                 .header__sub__leftBox__list__categoryMenu__fourthLevel--list{
@@ -161,10 +160,10 @@ a {
 
     ul.header__sub__leftBox__list > li ul{
         display: none;    
-        position: absolute;  /*ul.global_menu に対して位置指定*/
+        position: absolute; 
         top:50px;
         left:0;
-        width: 100%; /*横幅いっぱいに広げる*/
+        width: 100%; 
     }
     
     ul.header__sub__leftBox__list > li > ul > li{

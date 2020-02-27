@@ -15,13 +15,14 @@ class MainpagesController < ApplicationController
   end
 
   def ancestry_children
-    parent = Category.find(params[:category_id])
+    parent = Category.find(params[:parent_id])
     @category_children = parent.children
   end
 
   def ancestry_grand_children
     child = Category.find(params[:child_id])
     @category_grand_children = child.children
+    # binding.pry
   end
 
 end
