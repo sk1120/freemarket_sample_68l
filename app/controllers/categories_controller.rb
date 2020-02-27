@@ -1,12 +1,11 @@
 class CategoriesController < ApplicationController
   
   def index
-    # @categories = Category.all.where(ancestry: nil)
+    @categories = Category.all.where(ancestry: nil)
   end
 
   def show
-    # @category = Category.find(params[:id])
-    # @items = Item.find_by(category_child_id:@category.id)
+    @category = Category.find(params[:id])
+    @items = Item.where(category_parent_id:@category.id)
   end
-
 end
