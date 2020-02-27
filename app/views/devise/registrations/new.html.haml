@@ -1,6 +1,6 @@
 .header
   .header__logo
-    = link_to '#' do
+    = link_to root_path do
       = image_tag 'logo.png', class: "header__logo--image"
 .contents
   .contents__message
@@ -52,4 +52,3 @@
       = f.date_field :birthday, autofocus: true, class: "field__input"
     .actions
       = f.submit "次へ進む", class: "actions__submit"
-  = render "devise/shared/links"

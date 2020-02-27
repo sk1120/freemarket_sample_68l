@@ -1,11 +1,9 @@
-
 @import 'reset';
 @import 'modules/colors';
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 @import 'bxslider';
 @import "mypage";
-@import "mainpages";
 @import "modules/header";
 @import "modules/mainpage";
 @import "modules/footer";
@@ -16,3 +14,6 @@
 @import 'salepages';
 @import 'show_item';
 @import 'categories';
+@import "modules/flash";
+@import 'buys';
+

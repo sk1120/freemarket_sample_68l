@@ -3,7 +3,7 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
-
+  before_action :authenticate_user!
   # GET /resource/sign_up
   def new
     @user = User.new
@@ -32,6 +32,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @user.deliver_addresses.build(@address.attributes)
     if @user.save
       sign_in(:user, @user)
+      redirect_to root_path
+      flash[:notice] = "登録完了しました"
     else 
       render :new_address
     end

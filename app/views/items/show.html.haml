@@ -1,39 +1,35 @@
-.header
+= render "shared/header"
 
 .show_item
   .item_wrapper
-    %h1.item_title Ruby on Rails
+    %p.item_title 
+      = @item.name
     .image_top_wrapper
-      =image_tag  "https://cdn.pixabay.com/photo/2020/02/11/21/09/bio-4840960_1280.jpg",{class: "image_top"}
+      = image_tag @item.item_images.first.image_url.to_s, class: "image_top"
       %ul.bxslider
-        %li.image_child_wrapper
-          =image_tag "https://cdn.pixabay.com/photo/2020/01/26/22/55/road-4796107_1280.jpg",{class: "image_child"}
-        %li.image_child_wrapper
-          =image_tag "https://cdn.pixabay.com/photo/2017/08/28/17/39/poster-2690541_1280.png",{class: "image_child"}
-        %li.image_child_wrapper
-          =image_tag "https://cdn.pixabay.com/photo/2019/06/22/18/26/woman-4292185_1280.jpg",{class: "image_child"}
-        %li.image_child_wrapper
-          =image_tag "https://cdn.pixabay.com/photo/2020/02/06/21/44/rose-4825575_1280.jpg",{class: "image_child"}
-        %li.image_child_wrapper
-          =image_tag "https://cdn.pixabay.com/photo/2018/11/23/16/51/zebra-3834241_1280.jpg",{class: "image_child"}
-        %li.image_child_wrapper
-          =image_tag "https://cdn.pixabay.com/photo/2020/01/20/05/54/one-4779562_1280.jpg",{class: "image_child"}
-        %li.image_child_wrapper
-          =image_tag "https://cdn.pixabay.com/photo/2017/08/07/21/40/people-2608145_1280.jpg",{class: "image_child"}
-
-    %h1.item_price ¥10,000
+        - @item.item_images.each do |image|
+          %li.image_child_wrapper
+            = image_tag image.image_url.to_s,{class: "image_child"}
+    .item_box
+      %p.item_price 
+        ¥
+      %p.item_price 
+        = @item.price
     %p (税込)送料込み
-    %h1.item_title_bottom Ruby on Rails
+    %p.item_title_bottom 
+      = @item.name
     .item_table_wrapper
       %table.item_table
         %tr
           %th 出品者
           %td 
-            %p 山本俊介
+            %p 
+              = @item.saler.family_name
+              = @item.saler.first_name
         %tr
           %th カテゴリー
           %td 
-            =link_to "言語","#"
+            =link_to @item.category_grand_child.name, "#"
         %tr
           %th ブランド
           %td 
@@ -71,6 +67,12 @@
       =link_to "#",class: "report_inappropriate" do
         %i.fas.fa-flag
         %p 不適切な商品の通報
+    .item_wrapper__btn
+      - if @item.saler_id == current_user.id
+        = link_to "商品編集", edit_item_path, class: "item_wrapper__btn__edit"
+        = link_to "商品削除", item_path(@item), class: "item_wrapper__btn__destroy", method: :delete
+      - else
+        = link_to "商品購入", item_purchase_path(params[:id]), class: "item_wrapper__btn__buy"
 
 
 
@@ -124,4 +126,6 @@
     = link_to "ログイン", new_user_session_path, class: "header__right--btn"
     = link_to "新規登録", new_user_registration_path, class: "header__right--btn"
 
-.footer
+= render "shared/banner"
+= render "shared/footer"
+= render "shared/SellBtn"

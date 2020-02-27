@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_21_065450) do
+ActiveRecord::Schema.define(version: 2020_02_25_105904) do
 
   create_table "brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -18,6 +18,14 @@ ActiveRecord::Schema.define(version: 2020_02_21_065450) do
     t.datetime "updated_at", null: false
     t.bigint "category_id"
     t.index ["category_id"], name: "index_brands_on_category_id"
+  end
+
+  create_table "cards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "customer_id", null: false
+    t.string "card_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -62,12 +70,14 @@ ActiveRecord::Schema.define(version: 2020_02_21_065450) do
     t.string "shipping_date", default: "0", null: false
     t.text "text", null: false
     t.integer "price", null: false
+    t.integer "category_parent_id", null: false
+    t.integer "category_child_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "saler_id", null: false
-    t.bigint "category_id", null: false
+    t.bigint "category_grand_child_id", null: false
     t.string "brand"
-    t.index ["category_id"], name: "index_items_on_category_id"
+    t.index ["category_grand_child_id"], name: "index_items_on_category_grand_child_id"
     t.index ["saler_id"], name: "index_items_on_saler_id"
   end
 
@@ -92,6 +102,6 @@ ActiveRecord::Schema.define(version: 2020_02_21_065450) do
   add_foreign_key "brands", "categories"
   add_foreign_key "deliver_addresses", "users"
   add_foreign_key "item_images", "items"
-  add_foreign_key "items", "categories"
+  add_foreign_key "items", "categories", column: "category_grand_child_id"
   add_foreign_key "items", "users", column: "saler_id"
 end
