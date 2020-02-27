@@ -79,6 +79,20 @@
           margin-top: 10px;
           margin-right: 380px;
           font-weight: bold;
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          .title{
+            margin: 10px 0 30px 20px;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: left;
+          }
+          .card{
+            &--num{
+              margin: 16px 0;
+            }
+          }
         }
         &__bottom {
           margin-right: 160px;
@@ -116,5 +130,23 @@
         cursor: pointer;
       }
     }
+  }
+}
+
+.bought{
+  margin-bottom: 80px;
+  &--message{
+    text-align: center;
+    margin: 30px 0;
+  }
+  &--link{
+    display: inline-block;
+    width: 350px;
+    height: 50px;
+    background-color: $green;
+    color: $white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
   }
 }
