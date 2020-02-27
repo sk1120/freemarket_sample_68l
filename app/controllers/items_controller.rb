@@ -18,7 +18,7 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     @categories = Category.all.where(ancestry: nil)
     if @item.save
-      redirect_to root_path
+      redirect_to item_path(@item)
     else
       flash[:alert] = "入力が正しくありません"
       render :new
