@@ -15,16 +15,26 @@ Rails.application.routes.draw do
   resources :users ,only: :show do
     member do
       get 'logout'
-      get 'new_credit_card'
     end
   end
 
   resources :categories , only: [:show,:index]
 
   resources :items, except: :index do
+    get 'purchase'
+    post 'pay'
+    get 'done'
     collection do
       get 'ancestry_children'
       get 'ancestry_grand_children'
+    end
+  end
+
+  resources :card, only: [:new, :show] do
+    collection do
+      post 'show', to: 'card#show'
+      post 'pay', to: 'card#pay'
+      post 'delete', to: 'card#delete'
     end
   end
 end
