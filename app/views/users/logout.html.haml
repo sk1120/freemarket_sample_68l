@@ -1,4 +1,4 @@
-.header
+= render "shared/header"
 
 .my_page
   .main
@@ -9,8 +9,6 @@
         %li.contents__content__index
           %a.contents__content__index--area.logout{href: destroy_user_session_path,"data-method": :delete}
             %p ログアウト
-
-.app__footer
-
-
-.footer
+= render "shared/banner"
+= render "shared/footer"
+= render "shared/SellBtn"
