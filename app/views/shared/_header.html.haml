@@ -7,16 +7,43 @@
       %input{ type: "text", class: "searchform__text", placeholder: "キーワードから探す" }
     .submit
       %button{ type: "submit", src: "images/icon-search 1.png", class: "submitbtn__btn" } 
-        = image_tag "material/icon/icon-search 1.png", class: "submitbtn__icon"
+        = image_tag "material/icon/icon-search 1.png", class: "submitbtn__icon"    
 
   .header__lower
-    %ul.productlist
-      %li.category
-        = link_to "#" do
-          カテゴリー
-      %li.brand
-        = link_to "#" do
-          ブランド
+    %ul.header__lower__leftBox__list
+      %li.header__lower__leftBox__list__categoryMenu
+        = link_to "カテゴリーから探す", root_path
+        %ul.header__lower__leftBox__list1
+          %li
+            = link_to "レディース",category_path(@items), id: "1", class: "category-parent" 
+          %li
+            = link_to "メンズ",category_path(@items), id: "200", class: "category-parent" 
+          %li
+            = link_to "ベビー・キッズ",category_path(@items), id: "346", class: "category-parent" 
+          %li
+            = link_to "インテリア・住まい・小物",category_path(@items), id: "481", class: "category-parent" 
+          %li
+            = link_to "本・音楽・ゲーム",category_path(@items), id: "625", class: "category-parent" 
+          %li
+            = link_to "おもちゃ・ホビー・グッズ",category_path(@items), id: "685", class: "category-parent" 
+          %li
+            = link_to "コスメ・香水・美容",category_path(@items), id: "798", class: "category-parent" 
+          %li
+            = link_to "家電・スマホ・カメラ",category_path(@items), id: "898", class: "category-parent" 
+          %li
+            = link_to "スポーツ・レジャー",category_path(@items), id: "984", class: "category-parent" 
+          %li
+            = link_to "ハンドメイド",category_path(@items), id: "1093", class: "category-parent" 
+          %li
+            = link_to "チケット",category_path(@items), id: "1147", class: "category-parent" 
+          %li
+            = link_to "自転車・オートバイ",category_path(@items), id: "1207", class: "category-parent" 
+          %li
+            = link_to "その他",category_path(@items), id: "1270", class: "category-parent" 
+
+
+
+
     -if user_signed_in?
       %ul.userpage
         %li.userpage__info
