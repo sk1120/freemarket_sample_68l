@@ -16,7 +16,7 @@ $(document).on('turbolinks:load',function(){
         var appendList = ``
         datas.forEach(function(data){
           var child =`<li>
-                        <a class="category-child" href="/categpries/${data.id}" id="${data.id}">${data.name}</a>
+                        <a class="category-child" href="/categories/${data.id}" id="${data.id}">${data.name}</a>
                       </li>`
           appendList += child;
         })
