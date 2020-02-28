@@ -25,8 +25,28 @@ $(document).on('turbolinks:load', ()=> {
                   </div>`;
     return html;
   }
+  const buildFileField2 = (num)=> {
+    const html = `<div data-index="${num - 1}" class="js-file_group">
+                    <div class="js-file_group edit-image" data-index="${num - 1}">
+                    <input class="delete-js-file" type="file" name="item[item_images_attributes][${num - 1}][image_url]" id="item_item_images_attributes_${num - 1}_image_url">
+                    <br>
+                    <span class="js-remove">削除</span>
+                    </div>
+                  </div>`;
+    return html;
+  }
+  const buildFileField3 = (num)=> {
+    const html = `<div data-index="${num}" class="js-file_group">
+                    <input class="js-file" type="file" 
+                    name="item[item_images_attributes][${num}][image_url]" 
+                    id="item_item_images_attributes_${num}_image_url"><br>
+                  </div>`;
+    return html;
+  }
+            
   const buildImg = (index, url)=> {
-    const html = `<img data-index="${index}" src="${url}" width="100px" height="100px">`;
+    const html = `<img data-index="${index}" src="${url}" width="100px" height="100px">
+                  `;
     return html;
   }
   let fileIndex = [1,2,3,4,5,6,7,8,9,10];
@@ -34,6 +54,39 @@ $(document).on('turbolinks:load', ()=> {
   fileIndex.splice(0, lastIndex);
   $('.hidden-destroy').hide();
 
+  // $('.edit-box').on('change', '.js-file', function(e) {
+  //   const targetIndex = $(this).parent().data('index');
+  //   const file = e.target.files[0];
+  //   const blobUrl = window.URL.createObjectURL(file);
+  //   if (img = $(`img[data-index="${targetIndex}"]`)[0]) {
+  //     img.setAttribute('image_url', blobUrl);
+  //   } else {  
+  //     $('#previews').append(buildImg(targetIndex, blobUrl));
+  //     $('.js-box').append(buildFileField2(fileIndex[0]));
+  //     $('#image-box').append(buildFileField3(fileIndex[0]));
+  //     fileIndex.shift();
+  //     fileIndex.push(fileIndex[fileIndex.length - 1] + 1);
+  //   }
+  // });
+
+  // $('.edit-box').on('click', '.js-remove', function() {
+  //   const targetIndex = $(this).parent().data('index');
+  //   const hiddenCheck = $(`input[data-index="${targetIndex}"].hidden-destroy`);
+  //   if (hiddenCheck) hiddenCheck.prop('checked', true);
+  //   $(this).parent().remove();
+  //   $(`img[data-index="${targetIndex}"]`).remove();
+  //   if ($('.js-file').length == 0) $('.edit-box').append(buildFileField(fileIndex[0]));
+  // });
+
+  // $('.js-box').on('click', '.js-remove', function() {
+  //   const targetIndex = $(this).parent().data('index');
+  //   const hiddenCheck = $(`input[data-index="${targetIndex}"].hidden-destroy`);
+  //   if (hiddenCheck) hiddenCheck.prop('checked', true);
+  //   $(this).parent().remove();
+  //   $(`img[data-index="${targetIndex}"]`).remove();
+  //   if ($('.js-file').length == 0) $('.edit-box').append(buildFileField(fileIndex[0]));
+  // });
+  
   $('#image-box').on('change', '.js-file', function(e) {
     const targetIndex = $(this).parent().data('index');
     const file = e.target.files[0];
