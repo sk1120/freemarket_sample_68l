@@ -3,6 +3,13 @@ Rails.application.routes.draw do
 
   root 'mainpages#index'
 
+  resources :mainpages do
+    collection do
+      get 'ancestry_children'
+      get 'ancestry_grand_children'
+    end
+  end
+
   devise_for :users, controllers: {
     registrations: 'users/registrations',
     sessions: 'users/sessions'

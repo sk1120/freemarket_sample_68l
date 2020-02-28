@@ -85,7 +85,6 @@ a {
   font-size: 14px;
 }
     
-
   .header__lower {
     list-style: none;
     background-color: $white;
@@ -94,27 +93,45 @@ a {
     line-height: 50px;
     display: flex;
     justify-content: space-between;
-  }
+    .header__lower__leftBox__list {
+      line-height: 30px;
+      padding-top: 10px;
+      position: relative;
+      .header__lower__leftBox__list__categoryMenu {
+        a{
+          display: inline-block;
+          width: 210px;
+          height: 40px;
+        }
+        ul.header__lower__leftBox__list2{
+          left: 200px;
+        }
+        ul.header__lower__leftBox__list3{
+          left: 400px;
+          width: 250px;
+        }
+      }
+    } 
 
-    .productlist {
-      list-style: none;
-      background-color: $white;
-      display: flex;
-      width: 200px;
-      height: 50px;
+    ul.header__lower__leftBox__list > li ul{
+        display: none;    
+        position: absolute; 
+        top:50px;
+        left:0;
+        width: 100%; 
+    }
+    
+    ul.header__lower__leftBox__list > li > ul > li{
+        width:100%;
+        float: left;
+        background: $white;
+    }
+    
+    ul.header__lower__leftBox__list > li:hover ul{
+        display: block;
     }
 
-      .category {
-        background-color: $white;
-        width: 100px;
-        height: 50px;
-      }
 
-      .brand {
-        background-color: $white;
-        width: 100px;
-        height: 50px;
-      }
 
     .userpage {
       list-style: none;
@@ -128,7 +145,7 @@ a {
         padding-right: 30px;
       }
     }
-
+  }
 
   // 未ログインの時の表記について
     .userlogin {
