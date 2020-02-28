@@ -11,8 +11,8 @@ $(document).on('turbolinks:load',function(){
     'mouseenter' : function(){
       
       function appendChildCategories(datas){
-        var childs =`<ul class="header__sub__leftBox__list2"></ul>`
-        $('.header__sub__leftBox__list__categoryMenu').append(childs);
+        var childs =`<ul class="header__lower__leftBox__list2"></ul>`
+        $('.header__lower__leftBox__list__categoryMenu').append(childs);
         var appendList = ``
         datas.forEach(function(data){
           var child =`<li>
@@ -20,7 +20,7 @@ $(document).on('turbolinks:load',function(){
                       </li>`
           appendList += child;
         })
-        $('.header__sub__leftBox__list2').append(appendList);
+        $('.header__lower__leftBox__list2').append(appendList);
       }
   
       var id = $(this).attr('id')
@@ -39,7 +39,7 @@ $(document).on('turbolinks:load',function(){
 
     },
     'mouseleave' : function(){
-      $('.header__sub__leftBox__list2').remove();
+      $('.header__lower__leftBox__list2').remove();
     }
   })
 })
@@ -56,8 +56,8 @@ $(document).on("mouseenter", ".category-child", function(){
     'mouseenter' : function(){
       
       function appendChildCategories(datas){
-        var grand_childs =`<ul class="header__sub__leftBox__list3"></ul>`
-        $('.header__sub__leftBox__list__categoryMenu').append(grand_childs);
+        var grand_childs =`<ul class="header__lower__leftBox__list3"></ul>`
+        $('.header__lower__leftBox__list__categoryMenu').append(grand_childs);
         var appendList = ``
         datas.forEach(function(data){
           var grand_child =`<li>
@@ -65,7 +65,7 @@ $(document).on("mouseenter", ".category-child", function(){
                       </li>`
           appendList += grand_child;
         })
-        $('.header__sub__leftBox__list3').append(appendList);
+        $('.header__lower__leftBox__list3').append(appendList);
       }
   
       var id = $(this).attr('id')
@@ -84,7 +84,7 @@ $(document).on("mouseenter", ".category-child", function(){
 
     },
     'mouseleave' : function(){
-      $('.header__sub__leftBox__list3').remove();
+      $('.header__lower__leftBox__list3').remove();
     }
   })
 })

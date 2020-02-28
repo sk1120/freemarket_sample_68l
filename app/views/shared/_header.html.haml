@@ -10,10 +10,10 @@
         = image_tag "material/icon/icon-search 1.png", class: "submitbtn__icon"    
 
   .header__lower
-    %ul.header__sub__leftBox__list
-      %li.header__sub__leftBox__list__categoryMenu
+    %ul.header__lower__leftBox__list
+      %li.header__lower__leftBox__list__categoryMenu
         = link_to "カテゴリーから探す", root_path
-        %ul.header__sub__leftBox__list1
+        %ul.header__lower__leftBox__list1
           %li
             = link_to "レディース","/categories/1", id: "1", class: "category-parent" 
           %li
