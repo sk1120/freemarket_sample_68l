@@ -2,10 +2,8 @@ $(document).on('turbolinks:load',function(){
 
   $('.category-child').on({
     "mouseenter":function(){
-      console.log(this)
     },
     "mouseleave":function(){
-      console.log(this)
     }
   })
 
@@ -50,10 +48,8 @@ $(document).on("mouseenter", ".category-child", function(){
 
   $('.category-child').on({
     'mouseenter' : function(){
-      console.log(this);
     },
     'mouseleave' : function(){
-      console.log(this)
     }
   })
   $('.category-child').on({

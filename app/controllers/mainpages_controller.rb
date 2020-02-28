@@ -3,6 +3,7 @@ class MainpagesController < ApplicationController
     @category = Category.find(1)
     @items = Item.where(category_parent_id:@category.id).order("created_at DESC").limit(3)
     @itemsnew = Item.all.order("created_at DESC").limit(3)
+    @categories = Category.all.where(ancestry: nil)
   end
 
   def show
@@ -17,9 +18,6 @@ class MainpagesController < ApplicationController
 
   end
 
-  def index
-    @categories = Category.all.where(ancestry: nil)
-  end
 
   def ancestry_children
     parent = Category.find(params[:parent_id])
@@ -29,7 +27,6 @@ class MainpagesController < ApplicationController
   def ancestry_grand_children
     child = Category.find(params[:child_id])
     @category_grand_children = child.children
-    # binding.pry
   end
 
 end

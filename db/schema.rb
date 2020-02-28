@@ -70,12 +70,14 @@ ActiveRecord::Schema.define(version: 2020_02_25_105904) do
     t.string "shipping_date", default: "0", null: false
     t.text "text", null: false
     t.integer "price", null: false
+    t.integer "category_parent_id", null: false
+    t.integer "category_child_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "saler_id", null: false
-    t.bigint "category_id", null: false
+    t.bigint "category_grand_child_id", null: false
     t.string "brand"
-    t.index ["category_id"], name: "index_items_on_category_id"
+    t.index ["category_grand_child_id"], name: "index_items_on_category_grand_child_id"
     t.index ["saler_id"], name: "index_items_on_saler_id"
   end
 
@@ -100,6 +102,6 @@ ActiveRecord::Schema.define(version: 2020_02_25_105904) do
   add_foreign_key "brands", "categories"
   add_foreign_key "deliver_addresses", "users"
   add_foreign_key "item_images", "items"
-  add_foreign_key "items", "categories"
+  add_foreign_key "items", "categories", column: "category_grand_child_id"
   add_foreign_key "items", "users", column: "saler_id"
 end
