@@ -84,6 +84,11 @@ class ItemsController < ApplicationController
     @category_grand_children = child.children
   end
 
+  def search_item
+    item = Item.where('name LIKE?',"%#{params[:name]}%")
+    redirect_to "/items/#{item.ids[0]}"
+  end
+
   private
 
   def set_item

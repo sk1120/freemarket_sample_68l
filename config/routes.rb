@@ -27,6 +27,7 @@ Rails.application.routes.draw do
     collection do
       get 'ancestry_children'
       get 'ancestry_grand_children'
+      get 'search_item'
     end
   end
 
