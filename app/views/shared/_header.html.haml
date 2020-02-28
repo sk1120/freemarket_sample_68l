@@ -4,10 +4,11 @@
       =link_to root_path do
         = image_tag 'material/logo/logo.png', class: "title__logo"
     .searchform
-      %input{ type: "text", class: "searchform__text", placeholder: "キーワードから探す" }
-    .submit
-      %button{ type: "submit", src: "images/icon-search 1.png", class: "submitbtn__btn" } 
-        = image_tag "material/icon/icon-search 1.png", class: "submitbtn__icon"    
+      = form_with url: search_item_items_path,method: :get ,class: "searchform--form",local: true do |f|
+        = f.text_field :name,class: "searchform__text",placeholder: "キーワードから探す"
+        .submit
+          %button{ type: "submit", src: "images/icon-search 1.png", class: "submitbtn__btn" } 
+            = image_tag "material/icon/icon-search 1.png", class: "submitbtn__icon"
 
   .header__lower
     %ul.header__lower__leftBox__list

@@ -36,8 +36,16 @@
       list-style: none;
       width: 100%;
       height: 100%;
-
+      &--form{
+        display: flex;
+      }
+      .item_search{
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
       &__text {
+        display: inline-block;
         list-style: none;
         width: 100%;
         height: 35px;

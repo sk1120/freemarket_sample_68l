@@ -84,6 +84,16 @@ class ItemsController < ApplicationController
     @category_grand_children = child.children
   end
 
+  def search_item
+    item = Item.where('name LIKE?',"%#{params[:name]}%")
+    if item.exists?
+      redirect_to "/items/#{item.ids[0]}"
+    else
+      flash[:alert] = "商品がありません"
+      redirect_to root_path
+    end
+  end
+
   private
 
   def set_item
