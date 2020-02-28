@@ -86,7 +86,12 @@ class ItemsController < ApplicationController
 
   def search_item
     item = Item.where('name LIKE?',"%#{params[:name]}%")
-    redirect_to "/items/#{item.ids[0]}"
+    if item.exists?
+      redirect_to "/items/#{item.ids[0]}"
+    else
+      flash[:alert] = "商品がありません"
+      redirect_to root_path
+    end
   end
 
   private
