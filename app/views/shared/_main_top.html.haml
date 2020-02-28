@@ -139,7 +139,9 @@
 
       .pickupbrand__new
         = link_to category_path(@category) do
-          アーカイバ
+          %span
+            = @category.name
+          の新着商品
 
       .pickupbrand__items
         %ul.pickupbrand__top
