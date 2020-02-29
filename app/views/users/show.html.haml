@@ -1,4 +1,7 @@
 = render "shared/header"
+.breadcrumbs
+  - breadcrumb :mypage
+  = breadcrumbs separator: " &rsaquo; ", class: "breadcrumbs-list"
 
 .my_page
   .main

@@ -87,3 +87,4 @@ gem 'turbolinks', '~> 5'
 gem 'payjp'
 gem 'bxslider-rails'
 gem 'ransack'
+gem "gretel"
