@@ -153,6 +153,14 @@
         border-radius: 5px;
         width: 250px;
       }
+      &__preparation {
+        background: $green;
+        font-size: 18px;
+        color: $white;
+        display: block;
+        border-radius: 5px;
+        width: 300px;
+      }
     }
   }
   .item_comment_wrapper{
