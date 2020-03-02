@@ -145,6 +145,14 @@
         border-radius: 5px;
         width: 150px;
       }
+      &__soldout {
+        background: lightcoral;
+        font-size: 18px;
+        color: $white;
+        display: block;
+        border-radius: 5px;
+        width: 250px;
+      }
     }
   }
   .item_comment_wrapper{
