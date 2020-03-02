@@ -6,9 +6,29 @@ crumb :mypage do
   link "マイページ", "/users/#{current_user.id}"
 end
 
-crumb :category do
-  # link @category, parent.name
+crumb :logout do
+  link "ログアウト", logout_user_path(current_user)
+  parent :mypage 
 end
+
+crumb :card do
+  link "支払い方法", new_card_path
+  parent :mypage 
+end
+
+crumb :categories do
+  link "カテゴリ一覧"
+end
+
+crumb :category do |category|
+  link category.name, "#"
+  parent :categories
+end
+# crumb :category 
+# category.each do |parent|
+#     parent.name
+#   parent :root
+# end
 # crumb :projects do
 #   link "Projects", projects_path
 # end
