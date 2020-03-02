@@ -3,7 +3,7 @@
 
 .itemslist_main
   .itemslist_main__title
-    検索結果一覧
+    #{params[:name]}の検索結果一覧
   %ul.itemslist_main__contents
     -@items.each do |item|
       %li.itemslist_main__contents__list
