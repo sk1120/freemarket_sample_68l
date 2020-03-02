@@ -1,0 +1,34 @@
+.header
+  = render "shared/header"
+
+.itemslist_main
+  .itemslist_main__title
+    検索結果一覧
+  %ul.itemslist_main__contents
+    -@items.each do |item|
+      %li.itemslist_main__contents__list
+        = link_to item_path(item) do
+          = image_tag item.item_images[0].image_url.to_s, class: "itemslist_main__contents__list__img"
+          .itemslist_main__contents__list__data
+            .itemslist_main__contents__list__data__name
+              = item.name
+            %ul.itemslist_main__contents__list__data__details
+              %li.itemslist_main__contents__list__data__details__price
+                = item.price
+              %li.itemslist_main__contents__list__data__details__likes
+                ★4
+            %p (税込)
+          - if item.buyer_id?
+            .Soldout
+              Sold Out
+      
+
+
+.SellBtn
+  = render "shared/SellBtn"
+
+.banner
+  = render "shared/banner"
+
+.footer
+  = render "shared/footer"
