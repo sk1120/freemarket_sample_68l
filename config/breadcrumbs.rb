@@ -17,13 +17,46 @@ crumb :card do
 end
 
 crumb :categories do
-  link "カテゴリ一覧"
+  link "カテゴリ一覧", categories_path
 end
 
 crumb :category do |category|
-  link category.name, "#"
+  link category
   parent :categories
 end
+
+crumb :parents do |parents|
+  @item = Item.find(params[:id])
+  link @item.category_grand_child.parent.parent.name
+  parent :categories
+end
+
+crumb :child do |child|
+  @item = Item.find(params[:id])
+  link @item.category_grand_child.parent.name
+  parent :parents
+end
+
+crumb :grandchild do |grandchild|
+  @item = Item.find(params[:id])
+  link @item.category_grand_child.name
+  parent :child
+end
+
+crumb :item do |item|
+  link item
+  parent :grandchild
+end
+# crumb :child do |child|
+#   link child
+#   parent :category
+# end
+
+#       - parent.children.each do |child|
+#         link child.name, "#"
+#       end
+#   parent :categories
+# end
 # crumb :category 
 # category.each do |parent|
 #     parent.name

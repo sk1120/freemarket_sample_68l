@@ -1,5 +1,7 @@
 = render "shared/header"
-
+.breadcrumbs
+  - breadcrumb :item, @item.name
+  = breadcrumbs separator: " &rsaquo; ", class: "breadcrumbs-list"
 .show_item
   .item_wrapper
     %p.item_title 

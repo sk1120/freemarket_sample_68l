@@ -1,7 +1,7 @@
 .header
   = render "shared/header"
 .breadcrumbs
-  - breadcrumb :category, @category
+  - breadcrumb :category, @category.name
   = breadcrumbs separator: " &rsaquo; ", class: "breadcrumbs-list"
 .itemslist_main
   .itemslist_main__title
