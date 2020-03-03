@@ -3,6 +3,12 @@ class Item < ApplicationRecord
   belongs_to :category_grand_child , class_name: "Category"
   has_many :item_images , dependent: :destroy
   accepts_nested_attributes_for :item_images, allow_destroy: true
+  # belongs_to :user
+  has_many :likes, dependent: :destroy
+
+  def like_user(user_id)
+   likes.find_by(user_id: user_id)
+  end
 
   enum condition: {
     '新品、未使用': "1",

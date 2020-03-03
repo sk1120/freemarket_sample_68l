@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
 
+  get 'likes/create'
+  get 'likes/destroy'
   root 'mainpages#index'
 
   resources :mainpages do
@@ -28,6 +30,7 @@ Rails.application.routes.draw do
   resources :categories , only: [:show,:index]
 
   resources :items, except: :index do
+    resources :likes, only: [:create, :destroy]
     get 'purchase'
     post 'pay'
     get 'done'

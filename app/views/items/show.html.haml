@@ -60,10 +60,9 @@
           %td 
             %p 2~3日間で発送
     .item_wrapper__options
-      =link_to "#",class: "item_favorites" do
-        %i.fas.fa-star
-        %p お気に入り
-        %p 0
+      .item_favorites
+        %div{:id => "likes_buttons_#{@item.id}"}
+          = render partial: 'likes/like', locals: { item: @item, likes: @likes}
       =link_to "#",class: "report_inappropriate" do
         %i.fas.fa-flag
         %p 不適切な商品の通報

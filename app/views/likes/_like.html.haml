@@ -1,0 +1,7 @@
+- if Like.find_by(user_id: current_user.id, item_id: item.id)
+  = link_to item_like_path(item_id: item.id, id: item.likes[0].id), method: :delete,class: "delete_click", remote: true do
+    .fas.fa-star お気に入り
+- else
+  = link_to item_likes_path(@item), method: :post, remote: true do
+    .fas.fa-star#create_like お気に入り
+= item.likes.length
