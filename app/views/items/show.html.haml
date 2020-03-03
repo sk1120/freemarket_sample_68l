@@ -27,11 +27,11 @@
               = @item.saler.family_name
               = @item.saler.first_name
         %tr
-          %th カテゴリー
+          %th ブランド
           %td 
             =link_to @item.category_grand_child.name, "#"
         %tr
-          %th ブランド
+          %th カテゴリー
           %td 
             =link_to "メンズ","#"
             %br
@@ -62,7 +62,7 @@
     .item_wrapper__options
       .item_favorites
         %div{:id => "likes_buttons_#{@item.id}"}
-          = render partial: 'likes/like', locals: { item: @item, likes: @likes}
+          = render partial: 'likes/like', locals: { item: @item}
       =link_to "#",class: "report_inappropriate" do
         %i.fas.fa-flag
         %p 不適切な商品の通報

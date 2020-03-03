@@ -18,4 +18,23 @@ $(function(){
     var topImage = $(nextDom).prev('.image_top');
     $(topImage).attr('src',src)
   })
+
+  $('.delete_click').on('click',function(e){
+    e.preventDefault();
+    e.stopImmediatePropagation(); 
+    
+    var url = $(this).attr('href');
+    var type = $(this).attr('data-method');
+    // $.ajax({
+    //   url: url,
+    //   type: type,
+    //   data: ,
+    //   dataType: 'json'
+    // })
+    console.log(url)
+    console.log(type)
+
+
+
+  })
 })
