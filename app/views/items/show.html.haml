@@ -83,6 +83,8 @@
         - elsif @item.buyer_id?
           .item_wrapper__btn__soldout
             売り切れました
+        - else
+          = link_to "商品購入", item_purchase_path(params[:id]), class: "item_wrapper__btn__buy"
       - else
         = link_to "商品購入", item_purchase_path(params[:id]), class: "item_wrapper__btn__buy"
 
