@@ -40,7 +40,7 @@
         = f.text_field :family_name, autofocus: true, placeholder: '例）山田', class: "field__name__half"
         = f.text_field :first_name, autofocus: true, placeholder: '例）太郎', class: "field__name__half"
     .field
-      = f.label :お名前かな（全角）
+      = f.label :お名前ひらがな（全角）
       %span.field__required 必須
       .field__name
         = f.text_field :family_name_kana, autofocus: true, placeholder: '例）やまだ', class: "field__name__half"

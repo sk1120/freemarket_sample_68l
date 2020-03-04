@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_25_105904) do
+ActiveRecord::Schema.define(version: 2020_03_02_073838) do
 
   create_table "brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -77,8 +77,18 @@ ActiveRecord::Schema.define(version: 2020_02_25_105904) do
     t.bigint "saler_id", null: false
     t.bigint "category_grand_child_id", null: false
     t.string "brand"
+    t.integer "likes_count"
     t.index ["category_grand_child_id"], name: "index_items_on_category_grand_child_id"
     t.index ["saler_id"], name: "index_items_on_saler_id"
+  end
+
+  create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "item_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_likes_on_item_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -104,4 +114,6 @@ ActiveRecord::Schema.define(version: 2020_02_25_105904) do
   add_foreign_key "item_images", "items"
   add_foreign_key "items", "categories", column: "category_grand_child_id"
   add_foreign_key "items", "users", column: "saler_id"
+  add_foreign_key "likes", "items"
+  add_foreign_key "likes", "users"
 end
