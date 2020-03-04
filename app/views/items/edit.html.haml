@@ -73,7 +73,7 @@
           .main__content__show__state__sub
             必須
         .main__content__show__text4--input.icon-relative
-          = f.select :condition, [['選択してください', "0"],['新品、未使用', "1"],['未使用に近い', "2"],['目立った傷や汚れなし', "3"],['やや傷や汚れあり', "4"],['傷や汚れあり', "5"],['全体的に状態が悪い', "6"]],{}, class: 'main__content__name__text'
+          = f.select :condition, options_for_select([['選択してください', "0"],['新品、未使用', "1"],['未使用に近い', "2"],['目立った傷や汚れなし', "3"],['やや傷や汚れあり', "4"],['傷や汚れあり', "5"],['全体的に状態が悪い', "6"]],selected: Item.conditions[@item.condition]),{}, class: 'main__content__name__text'
           = icon('fa_icon' "chevron-down", class: "identification__form-icon")
       .main__content__delivery
         .main__content__delivery__item
@@ -84,7 +84,7 @@
           .main__content__delivery__title__sub
             必須
         .main__content__delivery__text5--input.icon-relative
-          = f.select :postage, [['選択してください', "0"],['送料込み(出品者負担)', "1"],['着払い(購入者負担)', "2"]],{}, class: 'main__content__name__text postage_form'
+          = f.select :postage, options_for_select([['選択してください', "0"],['送料込み(出品者負担)', "1"],['着払い(購入者負担)', "2"]],selected: Item.postages[@item.postage]),{}, class: 'main__content__name__text postage_form'
           = icon('fa_icon' "chevron-down", class: "identification__form-icon")
         .main__content__delivery__title  
           .main__content__delivery__title__subname.shipping_mean_title
@@ -108,7 +108,7 @@
           .main__content__delivery__day__sub
             必須
         .main__content__delivery__text7--input.icon-relative
-          = f.select :shipping_date, [['選択してください', "0"],['1~2日で発送', "1"],['2~3日で発送', "2"],['4~7日で発送', "3"]], {}, class: 'main__content__name__text'
+          = f.select :shipping_date, options_for_select([['選択してください', "0"],['1~2日で発送', "1"],['2~3日で発送', "2"],['4~7日で発送', "3"]],selected: Item.shipping_dates[@item.shipping_date]), {}, class: 'main__content__name__text'
           = icon('fa_icon' "chevron-down", class: "identification__form-icon")
       .main__content__price
         .main__content__price__item
