@@ -86,14 +86,17 @@
         .main__content__delivery__text5--input.icon-relative
           = f.select :postage, options_for_select([['選択してください', "0"],['送料込み(出品者負担)', "1"],['着払い(購入者負担)', "2"]],selected: Item.postages[@item.postage]),{}, class: 'main__content__name__text postage_form'
           = icon('fa_icon' "chevron-down", class: "identification__form-icon")
-        .main__content__delivery__title  
-          .main__content__delivery__title__subname.shipping_mean_title
-            発送方法
-          .main__content__delivery__title__sub.shipping_mean_title
-            必須
-        .main__content__delivery__text5--input.icon-relative.shipping_mean_form
-          = f.collection_select :shipping_means_id,ShippingMeans.all,:id,:means, {prompt: "選択してください"}, class: 'main__content__name__text'
-          = icon('fa_icon' "chevron-down", class: "identification__form-icon")
+        - if Item.postages[@item.postage] == "1"
+          .main__content__delivery__title
+            .main__content__delivery__title__subname.shipping_mean_title{:style => "display: block;"}
+              発送方法
+            .main__content__delivery__title__sub.shipping_mean_title{:style => "display: block;"}
+              必須
+          .main__content__delivery__text5--input.icon-relative.shipping_mean_form{:style => "display: block;"}
+            = f.collection_select :shipping_means_id,ShippingMeans.all,:id,:means, {prompt: "選択してください"}, class: 'main__content__name__text'
+            = icon('fa_icon' "chevron-down", class: "identification__form-icon")
+
+        
         .main__content__delivery__area
           .main__content__delivery__area__subname
             発送元の地域
@@ -128,9 +131,11 @@
           .main__content__price__box__commission
             販売手数料（10%)
             .main__content__price__box__commission__bar
+              ¥#{(@item.price * 0.1).round()}
           .main__content__price__box__profit
             販売利益
             .main__content__price__box__profit__bar_2
+              ¥#{(@item.price * 0.9).round()}
       .main__content__bottom
         .main__content__bottom__text
           %p 禁止されている出品、行為を必ずご確認ください。またブランド品でシリアルナンバー等がある場合はご記載ください。偽ブランドの販売は犯罪であり処罰される可能性があります。
