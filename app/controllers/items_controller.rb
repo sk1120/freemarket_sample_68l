@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   require "payjp"
 
   before_action :set_item, only: [:show, :edit,:update,:destroy]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:show]
 
   def show
     @items = Item.includes(:item_images).order('created_at DESC')
