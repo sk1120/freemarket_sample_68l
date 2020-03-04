@@ -70,9 +70,18 @@
         %i.fas.fa-flag
         %p 不適切な商品の通報
     .item_wrapper__btn
-      - if @item.saler_id == current_user.id
+      - if @item.saler_id == current_user.id && @item.buyer_id?
+        .item_wrapper__btn__preparation
+          購入希望者の手続き中です
+      - elsif @item.buyer_id == current_user.id
+        .item_wrapper__btn__preparation
+          購入手続き中です
+      - elsif @item.saler_id == current_user.id
         = link_to "商品編集", edit_item_path, class: "item_wrapper__btn__edit"
         = link_to "商品削除", item_path(@item), class: "item_wrapper__btn__destroy", method: :delete
+      - elsif @item.buyer_id?
+        .item_wrapper__btn__soldout
+          売り切れました
       - else
         = link_to "商品購入", item_purchase_path(params[:id]), class: "item_wrapper__btn__buy"
 
